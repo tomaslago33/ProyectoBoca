@@ -1,0 +1,103 @@
+/* FUENTES*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cabj+1905:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akzidenz:wght@400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=sans-serif:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akzidenz+Cnd:wght@600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400&display=swap');
+
+body {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor-carrusel{
+    width: 100%;
+    overflow: hidden;
+}
+
+.carrusel-track {
+    display: flex; 
+    transition: transform 0.8s cubic-bezier(0.45, 0, 0.55, 1); 
+    width: 100%; 
+}
+
+.diapositiva{
+    min-width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/*BLOQUE VIDEO*/
+.area-visual{
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.video-pantalla{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*BLOQUE AZUL DE TEXTO*/
+.franja-informativa{
+    background-color: #22396B;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.texto-principal{
+    font-family: "Cabj 1905", sans-serif; 
+    font-size: clamp(40px, 8vw, 80px);
+    font-weight: 500;
+    line-height: 1.1;
+    color: #F9BE3D;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.subtitulo-azul{
+    font-family: "Cabj 1905", sans-serif;
+    font-size: 40px;
+    color: rgba(249 , 190, 61, 0.5);
+    margin: 0;
+    text-transform: uppercase;
+    justify-self: flex-end;
+}
+
+/*TEXTO SECUNDARIO*/
+.descripcion-noticia p{
+    font-family: "Akzidenz", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/*BOTON LEER MAS*/
+.boton-leer{
+    display:flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.link-subrayado{
+   font-family: "Akzidenz", sans-serif; 
+   font-size: 16px;
+   color: #FFFFFF;
+   text-decoration: underline;
+   padding: 10px 0px;
+   background: transparent;
+   border: none;
+   cursor: pointer;
+}
