@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    margin-right: 15px;
+    font:"Akzidenz Cnd",Arial, sans-serif;
+    text-transform: uppercase;
+    padding: 20px 10px 10px 30px;
+}
+
+.menu a{
+        font-size: 19px;
+        text-decoration: none;
+        color:#ffffffa3;
+        font-weight: 1000;
+    }   
+
+.menu::first-letter{
+    float: right;
+}
+
+.menu span{
+    color: white;
+}
+
+.logo{
+    float:left ;
+    padding: 20px 10px 10px 10px;
+}
