@@ -11,13 +11,48 @@ body{
     background-color: var(--azulclaro);
 }
 
-.descargarapp-container{
-    width: 100%;
-    background-color: aqua;
+.top-bar__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.descargarapp-barra{
-    background-color: violet;
-    width: 100%;
-    height: 70px;
+.app-container {
+  display: flex;
+  align-items: center;
+  background: var(--azulclaro);
+  padding: 10px;
 }
+
+.clubatletico {
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.sponsors {
+  display: flex;
+  gap: 15px;
+  margin-left: auto; /* empuja todo a la derecha */
+}
+
+.sponsors img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.sponsors a {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.9;
+  white-space: nowrap;
+  width: 60px;
+}
+
+
+
