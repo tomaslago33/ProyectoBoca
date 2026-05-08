@@ -12,7 +12,7 @@
         <div class="clubatletico">CLUB ATLÉTICO BOCA JUNIORS</div>
         <div class="sponsors">
             <a href="adidas.com">
-                <img src="img_ivan/awa.png" alt="">
+                <img src="img_ivan/adidaslogo.png" alt="">
             </a>
             <a href="adidas.com">
                 <img src="img_ivan/awa.png" alt="">
@@ -29,27 +29,91 @@
         </div>
     </div>
 
-    <div class="app-carrusel">
+    <div class="promo-card">
+
+    <!-- CARRUSEL -->
+    <div class="carousel-container" id="carousel">
+
+        <div class="carousel-track" id="track">
+
+        <!-- duplicadas para loop -->
+        <img src="img_ivan/app1.png" alt="">
+        <img src="img_ivan/app2.png" alt="">
+        <img src="img_ivan/app3.png" alt="">
+
+        <img src="img_ivan/app1.png" alt="">
+        <img src="img_ivan/app2.png" alt="">
+        <img src="img_ivan/app3.png" alt="">
 
         </div>
 
-        <div class="app-texto">
-            <h1>
-                TODO BOCA #BLANCO
-                DESCARGATE LA APP #AMARILLO
-            </h1>
+    </div>
 
-            <p>
-                la app oficial etc etc Lorem ipsum dolor sit, amet consectetur 
-                adipisicing elit. Porro culpa illum quos eos deleniti 
-                reprehenderit ullam dicta, amet atque perspiciatis a eligendi 
-                fuga obcaecati earum unde tempore qui cumque quasi?
-            </p>
+    <!-- TEXTO -->
+    <div class="promo-info">
+        <h2>
+        TODO BOCA <br>
+        <span>DESCARGATE LA APP</span>
+        </h2>
 
-            <button> IR A BOCA SOCIOS</button>
-        </div>
+        <p>
+        La app oficial para socios. Gestioná tu cuenta, pagá tu cuota
+        social, renová tu abono y enterate de promociones exclusivas.
+        </p>
+
+        <a href="#" class="promo-btn">IR A BOCA SOCIOS</a>
+    </div>
+
     </div>
 
 
 </body>
+
+<script>
+    const carousel = document.getElementById("carousel");
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+carousel.addEventListener("mousedown", (e) => {
+  isDown = true;
+  startX = e.pageX - carousel.offsetLeft;
+  scrollLeft = carousel.scrollLeft;
+});
+
+carousel.addEventListener("mouseleave", () => {
+  isDown = false;
+});
+
+carousel.addEventListener("mouseup", () => {
+  isDown = false;
+});
+
+carousel.addEventListener("mousemove", (e) => {
+
+  if (!isDown) return;
+
+  e.preventDefault();
+
+  const x = e.pageX - carousel.offsetLeft;
+  const walk = (x - startX) * 1.5;
+
+  carousel.scrollLeft = scrollLeft - walk;
+
+
+  const maxScroll =
+    carousel.scrollWidth / 2;
+
+  if (carousel.scrollLeft <= 0) {
+    carousel.scrollLeft = maxScroll;
+  }
+
+  if (carousel.scrollLeft >= maxScroll) {
+    carousel.scrollLeft = 0;
+  }
+
+});
+carousel.scrollLeft = 1;
+</script>
 </html>
