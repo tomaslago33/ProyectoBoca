@@ -29,10 +29,12 @@ body{
         text-decoration: none;
         color:#ffffffa3;
         font-weight: 1000;
+        line-height: 1.5;
     }   
 
 #masmenu{
     margin-left: 45px;
+    
 }
 
 .menu span{
