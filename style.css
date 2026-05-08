@@ -1,31 +1,36 @@
 /* FUENTES*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;500;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Cabj+1905:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Akzidenz:wght@400,500,600,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=sans-serif:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Akzidenz+Cnd:wght@600,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400&display=swap');
-
-body {
+html, body {
     margin:0;
     padding: 0;
-    box-sizing: border-box;
+    height: auto; 
+    overflow-x: hidden;
+    background-color: #22396B;
 }
 
 .contenedor-carrusel{
     width: 100%;
     overflow: hidden;
+    height: 800px;
+    position: relative;
+    cursor: grab;
+}
+
+ /* Cursor de mano cerrada mientras se hace click */
+.contenedor-carrusel:active {
+    cursor: grabbing; 
 }
 
 .carrusel-track {
     display: flex; 
-    transition: transform 0.8s cubic-bezier(0.45, 0, 0.55, 1); 
-    width: 100%; 
+    height: 100%;
 }
 
 .diapositiva{
-    min-width: 100%;
-    flex-shrink: 0;
+    min-width: 100%; 
+    height: 800px;  
+    display: flex;
     display: flex;
     flex-direction: column;
 }
@@ -33,8 +38,9 @@ body {
 /*BLOQUE VIDEO*/
 .area-visual{
     width: 100%;
-    height: 60vh;
+    height:  500px;
     overflow: hidden;
+    flex-shrink: 0;
     background-color: #000;
 }
 
@@ -42,24 +48,32 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 /*BLOQUE AZUL DE TEXTO*/
 .franja-informativa{
     background-color: #22396B;
-    padding: 40px;
+    height: 300px;
+    padding: 30px 60px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
+    justify-content: flex-start;
     box-sizing: border-box;
+    position: relative;
+    gap: 20px
+}
+
+.contenedor-titulo{
+    min-height: 120px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .texto-principal{
-    font-family: "Cabj 1905", sans-serif; 
-    font-size: clamp(40px, 8vw, 80px);
-    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(40px, 6vw, 80px);
     line-height: 1.1;
     color: #F9BE3D;
     margin: 0;
@@ -67,37 +81,96 @@ body {
 }
 
 .subtitulo-azul{
-    font-family: "Cabj 1905", sans-serif;
-    font-size: 40px;
-    color: rgba(249 , 190, 61, 0.5);
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    color: rgba(249, 190, 61, 0.5);
     margin: 0;
     text-transform: uppercase;
-    justify-self: flex-end;
+    line-height: 1.2;
+}
+
+.fila-noticia-pie{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-top: auto; 
+    padding-bottom: 10px;
 }
 
 /*TEXTO SECUNDARIO*/
+
+.descripcion-noticia{
+    max-width: 70%;
+}
+
 .descripcion-noticia p{
-    font-family: "Akzidenz", Arial, sans-serif;
-    font-size: 16px;
-    line-height: 28px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
     color: #FFFFFF;
     margin: 0;
 }
 
 /*BOTON LEER MAS*/
 .boton-leer{
-    display:flex;
-    width: 100%;
+    display: flex;
     justify-content: flex-end;
 }
 
 .link-subrayado{
-   font-family: "Akzidenz", sans-serif; 
-   font-size: 16px;
-   color: #FFFFFF;
-   text-decoration: underline;
-   padding: 10px 0px;
-   background: transparent;
-   border: none;
-   cursor: pointer;
+   font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 0;
+    cursor: pointer;
+    white-space: nowrap; 
+    margin: 0
+}
+
+.link-subrayado::before {
+    content: "";
+    position: absolute;
+    bottom: 5px; 
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FFFFFF; 
+    
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.735s cubic-bezier(0.625, 0.05, 0, 1);
+}
+
+/* EFECTO HOVER */
+.link-subrayado:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.link-subrayado::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FFFFFF;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.735s cubic-bezier(0.625, 0.05, 0, 1);
+}
+
+.linea-separadora-amarilla {
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    height: 6px;
+    width: 100%;
+    background-color: #F9BE3D;
+    margin: 0;
 }
