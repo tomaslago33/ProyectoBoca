@@ -9,8 +9,6 @@
 
 body{
     background-color: var(--azulclaro);
-    margin: 0;
-    padding: 40px;
     font-family: Arial, sans-serif;
 }
 
@@ -24,43 +22,73 @@ body{
 }
 
 .app-container {
+  background: var(--azulclaro);
   display: flex;
   align-items: center;
-  background: var(--azulclaro);
-  padding: 10px;
-  margin-bottom: 30px;
+  justify-content: space-between;
+  padding: 10px 46px;
 }
 
 .clubatletico {
   color: white;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 13px;
 }
 
 .sponsors {
   display: flex;
-  gap: 40px;
-  margin-left: auto; 
+  align-items: center;
+  gap: 25px;
 }
 
 .sponsors img {
-  height: auto;
-  object-fit: cover;
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+.sponsors img.logo-adidas{
+  height: 32px;
+}
+
+.sponsors img.logo-betson{
+  height: 40px;
+}
+
+.sponsors img.logo-directv{
+  height: 25px;
+}
+
+.sponsors img.logo-centrohogar{
+  height: 18px;
+}
+
+.sponsors img.logo-pax{
+  height: 25px;
 }
 
 .sponsors a {
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 500;
-  opacity: 0.9;
-  white-space: nowrap;
-  width: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.divisor-amarillo {
+  width: 100%;
+  height: 6px;
+  background-color: var(--amarillo);
+}
+
+.divisor-linea {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255,255,255,0.15);
+  margin-bottom: 40px;
 }
 
 .promo-card {
   display: flex;
-  width: 100%;
-  max-width: 1280px;
+  width: 97%;
   margin: auto;
   border: 1px solid rgba(255,255,255,0.15);
   background: var(--azulclaro);
@@ -94,15 +122,16 @@ body{
   padding: 45px 35px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  position: relative;
 }
 
 .promo-info h2 {
   color: white;
-  font-size: 70px;
+  font-size: 50px;
   line-height: 0.95;
   margin: 0;
   font-weight: 900;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .promo-info span {
@@ -112,12 +141,12 @@ body{
 .promo-info p {
   color: white;
   font-size: 20px;
-  line-height: 1.6;
-  max-width: 600px;
 }
 
 .promo-btn {
-  align-self: flex-end;
+  position: absolute;
+  right: 35px;
+  bottom: 45px;
   background: var(--amarillo);
   color: #111;
   text-decoration: none;
@@ -127,6 +156,6 @@ body{
 }
 
 .promo-btn:hover {
-  background: var(--amarillo);
+  background: #e0a733;
 }
 
