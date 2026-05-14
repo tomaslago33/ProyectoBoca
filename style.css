@@ -1,10 +1,9 @@
+/* FUENTES*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;500;700&display=swap');
 *{
     box-sizing: border-box;
 }
 
-body{
-    background-color: black;
-}
 
 .menu{
     justify-content: flex-start;
@@ -12,7 +11,17 @@ body{
     margin-left: 1150px;
     font:20px "Akzidenz Cnd",Arial, sans-serif;
     text-transform: uppercase;
-    padding: 24px 20px 0px;
+    padding: 15px 5px 0px;
+}
+
+.navbarlogo{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    padding: 24px 50px;
 }
 
 .navbar-brand:hover{
@@ -25,11 +34,19 @@ body{
     transition: 0.10s;
 }
 
+.navbar-brand{
+    margin-right:20px;
+}
 .menu a{
         text-decoration: none;
         color:#ffffffa3;
         font-weight: 1000;
         line-height: 1.5;
+        width: 10%;
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+        
     }   
 
 #masmenu{
@@ -42,6 +59,183 @@ body{
 }
 
 .logo{
-    float:left ;
-    padding: 24px 20px 0px ;
+    float: left;
+    padding: 1px 20px 0px ;
+    position: fixed;
+    z-index: 1000;
+
+    
+}
+html, body {
+    margin:0;
+    padding: 0;
+    height: auto; 
+    overflow-x: hidden;
+    background-color: #22396B;
+}
+
+.contenedor-carrusel{
+    width: 100%;
+    overflow: hidden;
+    height: 800px;
+    position: relative;
+    cursor: grab;
+}
+
+ /* Cursor de mano cerrada mientras se hace click */
+.contenedor-carrusel:active {
+    cursor: grabbing; 
+}
+
+.carrusel-track {
+    display: flex; 
+    height: 100%;
+}
+
+.diapositiva{
+    min-width: 100%; 
+    height: 800px;  
+    display: flex;
+    display: flex;
+    flex-direction: column;
+}
+
+/*BLOQUE VIDEO*/
+.area-visual{
+    width: 100%;
+    height:  500px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: #000;
+}
+
+.video-pantalla{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/*BLOQUE AZUL DE TEXTO*/
+.franja-informativa{
+    background-color: #22396B;
+    height: 300px;
+    padding: 30px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    position: relative;
+    gap: 20px
+}
+
+.contenedor-titulo{
+    min-height: 120px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto-principal{
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(40px, 6vw, 80px);
+    line-height: 1.1;
+    color: #F9BE3D;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.subtitulo-azul{
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    color: rgba(249, 190, 61, 0.5);
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.fila-noticia-pie{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-top: auto; 
+    padding-bottom: 10px;
+}
+
+/*TEXTO SECUNDARIO*/
+
+.descripcion-noticia{
+    max-width: 70%;
+}
+
+.descripcion-noticia p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/*BOTON LEER MAS*/
+.boton-leer{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.link-subrayado{
+   font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 0;
+    cursor: pointer;
+    white-space: nowrap; 
+    margin: 0
+}
+
+.link-subrayado::before {
+    content: "";
+    position: absolute;
+    bottom: 5px; 
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FFFFFF; 
+    
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.735s cubic-bezier(0.625, 0.05, 0, 1);
+}
+
+/* EFECTO HOVER */
+.link-subrayado:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.link-subrayado::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FFFFFF;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.735s cubic-bezier(0.625, 0.05, 0, 1);
+}
+
+.linea-separadora-amarilla {
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    height: 6px;
+    width: 100%;
+    background-color: #F9BE3D;
+    margin: 0;
 }
