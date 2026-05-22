@@ -52,12 +52,19 @@ function dragEnd(event) {
 }
 
 // 2. FUNCIÓN PARA ACTUALIZAR EL MOVIMIENTO 
-function actualizarPosicion() {
-    track.style.transition = 'transform 0.8s cubic-bezier(0.45, 0, 0.55, 1)';
-    const desplazamiento = indiceActual * -100;
-    track.style.transform = `translateX(${desplazamiento}vw)`;
+function actualizarPosicion() { 
+    const anchoDiapositiva = diapositivas[0].getBoundingClientRect().width;
+    const desplazamiento = indiceActual * -anchoDiapositiva;
+    track.style.transition = `transform 0.8s cubic-bezier(0.45, 0, 0.55, 1)`;
+    track.style.transform = `translateX(${desplazamiento}px)`;
 }
 
+window.addEventListener(`resize` , ()=>{
+    track.style.transition= 'none';
+    actualizarPosicion();
+});
+
+setInterval(moverAutomaticamente, 5000);
 
 
 // 3. MOVIMIENTO AUTOMÁTICO 
