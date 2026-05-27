@@ -5,28 +5,34 @@
 
 
 .menu{
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-right: 5%;
-    font:20px "Akzidenz Cnd",Arial, sans-serif;
+    pointer-events: auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    font-family: "Akzidenz Cnd", Arial, sans-serif;
     text-transform: uppercase;
-    
+    margin-right: 0;
 }
 
 .barra-cabecera{
-    position: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 32px 40px 0px;
+    align-items: flex-start;
+    padding: 40px 60px 0px 60px;
+    box-sizing: border-box;
+    pointer-events: none;
 }
 
+.logo{
+    pointer-events: auto;
+}
 .navbarlogo{
-    position: fixed;
-   
-    
+    display:block;
 }
 
 .navbar-brand:hover{
@@ -40,23 +46,52 @@
 }
 
 .navbar-brand{
-    margin-right:100%;
+    margin-right:0;
 }
 .menu a{
-        text-decoration: none;
-        color:#ffffffa3;
-        font-weight: 1000;
-        line-height: 1.5;
-      
-        display: flex;
-        justify-content: space-between;
-        gap: 5px;
+    text-decoration: none;
+    color: #ffffffa3;
+    font-weight: 700;
+    line-height: 1.4;
+    font-size: 20px;
+    display:inline-flex;
+    justify-content: flex-start;
+    margin-bottom: 6px;
+    gap: 6px; 
+    width: 160px; 
+    text-align: left; 
+    transition: color 0.1s ease;
         
-    }   
+    }  
+    
+.menu nav {
+    background: transparent !important;
+    padding: 0 !important; 
+}
 
 #masmenu{
-    margin-left: 45px;
-    
+    display: inline-flex;
+    flex-direction: row;
+    width: 160px; 
+    text-align: left;
+    align-items: center;
+    padding-left: 45px; 
+    box-sizing: border-box;
+}
+
+#masmenu span {
+    color: white;
+    margin-left: auto; 
+    width: 95px; 
+    text-align: left;
+}
+
+#masmenu:hover {
+    color: #F9BE3D !important; 
+}
+
+#masmenu:hover span {
+    color: #F9BE3D !important;
 }
 
 .menu span{
@@ -82,7 +117,7 @@ html, body {
     cursor: grab;
 }
 
- /* Cursor de mano cerrada mientras se hace click */
+
 .contenedor-carrusel:active {
     cursor: grabbing; 
 }
