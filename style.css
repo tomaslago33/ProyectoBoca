@@ -429,3 +429,15 @@ body{
     --blanco:#FFFFFF;
 }
 
+.canalboca{
+    background-color: goldenrod;
+    flex-flow: column;
+    display: flex;
+    width: 70%;
+    margin: 20px 10px 20px 20px;
+}
+
+.canal-cabecera img{
+    border-radius: 100px;
+  
+}
