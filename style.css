@@ -273,3 +273,159 @@ html, body {
     background-color: #F9BE3D;
     margin: 0;
 }
+body{
+    background-color: var(--azulclaro);
+    font-family: Arial, sans-serif;
+}
+
+.top-bar__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-container {
+  background: var(--azulclaro);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 46px;
+}
+
+.clubatletico {
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.sponsors {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.sponsors img {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+.sponsors img.logo-adidas{
+  height: 32px;
+}
+
+.sponsors img.logo-betson{
+  height: 40px;
+}
+
+.sponsors img.logo-directv{
+  height: 25px;
+}
+
+.sponsors img.logo-centrohogar{
+  height: 18px;
+}
+
+.sponsors img.logo-pax{
+  height: 25px;
+}
+
+.sponsors a {
+  display: flex;
+  align-items: center;
+}
+
+
+.divisor-linea {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255,255,255,0.15);
+  margin-bottom: 40px;
+}
+
+.promo-card {
+  display: flex;
+  width: 97%;
+  margin: auto;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: var(--azulclaro);
+}
+
+.carousel-container {
+  width: 50%;
+  overflow: hidden;
+  cursor: grab;
+  position: relative;
+}
+
+.carousel-container:active {
+  cursor: grabbing;
+}
+
+.carousel-track {
+  display: flex;
+}
+
+.carousel-track img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+}
+
+.promo-info {
+  width: 50%;
+  padding: 45px 35px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.promo-info h2 {
+  color: white;
+  font-size: 50px;
+  line-height: 0.95;
+  margin: 0;
+  font-weight: 900;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.promo-info span {
+  color: var(--amarillo);
+}
+
+.promo-info p {
+  color: white;
+  font-size: 20px;
+}
+
+.promo-btn {
+  position: absolute;
+  right: 35px;
+  bottom: 45px;
+  background: var(--amarillo);
+  color: #111;
+  text-decoration: none;
+  padding: 18px 30px;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.promo-btn:hover {
+  background: #e0a733;
+}
+
+:root {
+    --azulclaro: #22396B;
+    --azulmedio: #16284F ;
+    --azuloscuro: #222E46 ;
+    --amarillo: #F9BE3D;
+    --negro: #000000;
+    --blanco:#FFFFFF;
+}
+
