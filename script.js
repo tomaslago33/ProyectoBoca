@@ -47,7 +47,6 @@ function dragEnd(event) {
     } else if (movedBy > 100 && indiceActual > 0) {
         indiceActual--;
     }
-
     actualizarPosicion();
 }
 
