@@ -429,3 +429,7 @@ body{
     --blanco:#FFFFFF;
 }
 
+.noticias img{
+  width: 30%;
+  height: auto;
+}
