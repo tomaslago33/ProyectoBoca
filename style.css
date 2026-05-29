@@ -430,7 +430,13 @@ body{
 }
 
 .noticias-tarjetas img{
+  justify-self: center;
   width: 100%;
+}
+
+.noticias-tarjetas img:hover{
+  width: 80%;
+  transition-duration: 0.60s;
 }
 
 .box-noticias{
@@ -457,8 +463,6 @@ body{
 
 }
 
-
-
 .noticias-titulo {
   justify-content: space-between;
   background-color: blueviolet;
@@ -479,5 +483,12 @@ body{
   color: white;
   font-weight: bold;
   
+}
+
+.barra-betson{
+  background-color: var(--amarillo);
+  display: flex;
+  border-radius: 0px 0px 0px 15px;
+  width: 90%;
 }
 
