@@ -79,3 +79,48 @@ setInterval(moverAutomaticamente, 5000);
 
 // movimiento cada 5 segundos
 setInterval(moverAutomaticamente, 5000);
+
+document.addEventListener("DOMContentLoaded", function() {
+    const swiperShop = new Swiper(".slider-productos", {
+        direction: "horizontal",
+        slidesPerView: 1.1,
+        slidesPerGroup: 1,
+        spaceBetween: 16,
+        loop: false,
+        centeredSlides: false,
+        mousewheel: {
+            forceToAxis: true
+        },
+        speed: 300,
+        navigation: {
+            nextEl: ".flecha-der", 
+            prevEl: ".flecha-izq"  
+        },
+        breakpoints: {
+            480: { slidesPerView: 1.5 },
+            768: { slidesPerView: 2 },
+            992: { slidesPerView: 3 },
+            1300: { slidesPerView: 4.2 },
+            1600: { slidesPerView: 5.5 }
+        },
+        on: {
+            init: function () {
+                controlarFlechaIzquierda(this);
+            },
+            slideChange: function () {
+                controlarFlechaIzquierda(this);
+            }
+        }
+    });
+
+    function controlarFlechaIzquierda(swiper) {
+        const flechaIzq = document.querySelector(".flecha-izq");
+        if (flechaIzq) {
+            if (swiper.isBeginning) {
+                flechaIzq.style.display = "none";
+            } else {
+                flechaIzq.style.display = "block";
+            }
+        }
+    }
+});
