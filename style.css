@@ -430,14 +430,43 @@ body{
 }
 
 .canalboca{
-    background-color: goldenrod;
+    background-color: var(--amarillo);
     flex-flow: column;
     display: flex;
     width: 70%;
     margin: 20px 10px 20px 20px;
 }
 
+.canal-cabecera{
+    color: var(--azuloscuro);
+    font:"Akzidenz Cnd", Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .canal-cabecera img{
-    border-radius: 100px;
-  
+    margin: 5px;
+}
+
+.botonvivo{
+font-family: Akzidenz, Arial, sans-serif;
+font-size: 13px;
+font-weight: 600;
+line-height: 13px;
+text-align: start;
+color: rgb(255, 255, 255);
+background-color: rgb(34, 57, 107);
+margin: 0px;
+padding: 6px 8px 6px 4px;
+border: 0px none rgb(255, 255, 255);
+border-radius: 6px;
+display: flex;
+position: static;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+gap: 1px;
+opacity: 1;
+width: 10%;
 }
