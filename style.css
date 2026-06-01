@@ -501,18 +501,27 @@ transform: matrix(1, 0, 0, 1, 0, 0);
     position: relative;
 }
 
-.linkcanal::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -5px;
-  left: %;
-  background-color: var(--azuloscuro);
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
+.linkcanal:hover::before {
+    transform: scaleX(1);
+    transform-origin: right;
+    transition-delay: 0.2s;
 }
 
 .linkcanal:hover::after {
-  width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
 }
+
+.linkcanal::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--azuloscuro);
+    transform: scaleX(1); 
+    transform-origin: left; 
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
