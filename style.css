@@ -432,13 +432,15 @@ body{
 .seccion-shop{
     width: 100%;
     background-color: var(--blanco);
-    padding: 80px 0px; 
+    padding: 80px 80px; 
     position: relative;
+    overflow: visible !important;
 }
 
 .contenedor-shop{
     width: 100%;
     padding: 0 60px;
+    overflow: visible;
 }
 
 .encabezado-shop{
@@ -485,21 +487,23 @@ body{
 
 .slider-productos {
     position: relative; 
-    overflow: hidden;
-    padding: 0 0 20px 0;
+    padding: 50px 0 20px 0; 
     max-width: 1450px;
     margin: 0 auto;
+    overflow: visible !important;
 }
 
 .slider-degradado {
-    position: absolute;
-    top: 0;
+   position: absolute;
+    top: 50px; 
     right: 0;
-    bottom: 0;
+    bottom: 20px;
     width: 120px; 
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 100%);
     z-index: 8; 
     pointer-events: none; 
+    opacity: 0; 
+    transition: opacity 0.3s ease;
 }
 
 .slider-productos .flecha-slider {
@@ -516,8 +520,9 @@ body{
     opacity: 0; 
     transition: opacity 0.3s ease, transform 0.2s ease;
 }
-.slider-productos:hover .flecha-slider {
-    opacity: 1;
+.slider-productos:hover .flecha-slider,
+.slider-productos:hover .slider-degradado {
+    opacity: 1; 
 }
 
 .flecha-slider:active {
