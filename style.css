@@ -441,40 +441,31 @@ body{
 }
 
 .noticias-tarjetas {
-    overflow: hidden;
-
+  overflow: hidden;
   display: flex;
-  width: 97%;
+  width: 100%;
   margin: auto;
-  border: 1px solid rgba(255,255,255,0.15);
-  justify-content: space-between;
-
+  justify-content: space-evenly;
 }
 
 .noticias-tarjetas a {
-  border: 1px solid rgba(255,255,255,0.15);
-  background: skyblue;
-  width: 43%;
-  margin: 15px;
-
+  border: 1px solid gray;
+  width: 48%;
 }
 
 .noticias-titulo {
   justify-content: space-between;
-  background-color: blueviolet;
+  background-color:var(--azulclaro);
   width: 100%;
   height: 10%;
   display: flex;
 }
 
-
-
-.noticias-titulo a{
-  padding-top: 1.5%;
-  text-decoration: underline;
-  color: white;
-  font-weight: bold;
-  
+.noticias-titulo h1{
+    color: white;
+    font: 40px "Akzidenz Cnd", Arial, sans-serif;
+    font-weight: 700;
+    margin: 50px 0px 30px 12px;
 }
 
 .barra-betson{
@@ -489,9 +480,10 @@ body{
     overflow: hidden;
 
     display: block;
-    background: var(--azuloscuro);
+    background: var(--azulclaro);
     color: white;
     text-decoration: none;
+
 }
 
 .hover-bar{
@@ -501,22 +493,24 @@ body{
     bottom: -60px;
 
     width: 100%;
-    height: 60px;
+    height: 40px;
 
-    background: #f5d31f;
+    background: var(--amarillo);
 
     display: flex;
     justify-content: flex-end;
     align-items: center;
 
-    padding-right: 25px;
+    margin-right: 25px;
 
-    transition: bottom .35s ease;
+    transition: bottom .60s ease;
 }
 
 .hover-bar span{
-    color: #111;
-    font-weight: 700;
+    color: var(--azulclaro);
+    font-weight: 600;
+    margin: 0px 25px;
+    text-decoration: underline;
 
     opacity: 0;
     transform: translateY(15px);
@@ -537,6 +531,11 @@ body{
 
 .titunoti{
     transition: transform .35s ease;
+    border-top: 1px solid gray;
+}
+
+.titunoti h2{
+    margin: 15px 0px 15px 10px;
 }
 
 .noticia-card:hover .titunoti{
@@ -549,4 +548,68 @@ body{
 
 .noticia-card:hover img{
     transform: scale(1.03);
+}
+
+.linknoticias {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  margin: 60px 12px 1px 0px;
+}
+
+.linknoticias::after{
+    content: "";
+    position: absolute;
+    bottom: 70%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background:currentColor;
+}
+
+.linknoticias.hover-in::after,
+.linknoticias.hover-out::after{
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.linknoticias.hover-in::after{
+    animation-name: underlineMove;
+}
+
+.linknoticias.hover-out::after{
+    animation-name: underlineMove;
+}
+
+@keyframes underlineMove{
+    0%{
+        transform: translateX(0) scaleX(1);
+    }
+    50%{
+        transform: translateX(50%) scaleX(0);
+    }
+    51%{
+        transform: translateX(-50%) scaleX(0);
+    }
+    100%{
+        transform: translateX(0) scaleX(1);
+    }
+    
+}
+
+.cat-fecha {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cat{
+    margin: 5px 0px 5px 10px;
+}
+
+.fecha{
+    margin: 5px 10px 5px;
 }
