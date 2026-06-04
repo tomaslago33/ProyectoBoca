@@ -490,7 +490,7 @@ opacity: 1;
 transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
-.linkcanal{
+/*.linkcanal{
     font-family: Akzidenz, Arial, sans-serif;
     color: var(--azuloscuro);
     font-weight: 600;
@@ -523,5 +523,59 @@ transform: matrix(1, 0, 0, 1, 0, 0);
     transform: scaleX(1); 
     transform-origin: left; 
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}*/
+
+.linkcanal{
+    position: relative;
+    text-decoration: none;
+    font-family: Akzidenz, Arial, sans-serif;
+    color: var(--azuloscuro);
+    font-weight: 600;
+    font-size: 18px;
+    display: inline-block;
+    margin: 20px 20px 5px auto;
 }
 
+.linkcanal::after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    background:currentColor ;
+    transform: translateX(0);
+}
+
+.linkcanal:hover-in::after,
+.linkcanal:hover-out::after{
+    animation-duration: .45s ;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.linkcanal:hover-in::after{
+    animation-name: underlineMove;
+}
+
+.linkcanal:hover-out::after{
+    animation-name: underlineMove;
+}
+
+@keyframes underlineMove {
+    0%{
+        transform: translateX(0) scaleX(1);
+    }
+
+    50%{
+        transform: translateX(50%) scaleX(0);
+    }
+
+    51%{
+        transform: translateX(-50%) scaleX(0);
+    }
+
+    100%{
+        transform: translateX(0) scaleX(1);
+    }
+}
