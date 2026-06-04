@@ -1,4 +1,4 @@
-/* FUENTES*/
+* FUENTES*/
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;500;700&display=swap');
 *{
 }
@@ -432,27 +432,26 @@ body{
 .seccion-shop{
     width: 100%;
     background-color: var(--blanco);
-    padding: 80px 80px; 
+    padding: 80px 0px; 
     position: relative;
-    overflow: visible !important;
 }
 
 .contenedor-shop{
     width: 100%;
     padding: 0 60px;
-    overflow: visible;
 }
 
 .encabezado-shop{
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; 
-    margin-bottom: 30px;
-    width: 100%;
-    max-width: 1450px;  
+    align-items: flex-end;
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 1450px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 10px;
+    padding: 0 70px;
+    box-sizing: border-box;
 }
 
 .titulo-shop{
@@ -472,17 +471,46 @@ body{
 }
 
 .tarjeta-producto{
-    display: flex;
+   display: flex;
     flex-direction: column;
-    background-color: var(--blanco);
-    
+    background-color: transparent; 
     text-decoration: none;
     box-sizing: border-box;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
     height: 100%;
-    padding-top: 50px;
-    position: relative;
-    width: 100%;
+    padding-top: 150px; 
+}
+
+.slider-degradado {
+  position: absolute;
+    top: 50px; 
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 8; 
+    pointer-events: none; 
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+.slider-degradado::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -90px;
+    bottom: 0;
+    width: 120px; 
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* 2. EL DEGRADADO DE LA DERECHA */
+.slider-degradado::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 120px; 
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
 .slider-productos {
@@ -493,33 +521,22 @@ body{
     overflow: visible !important;
 }
 
-.slider-degradado {
-   position: absolute;
-    top: 50px; 
-    right: 0;
-    bottom: 20px;
-    width: 120px; 
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 100%);
-    z-index: 8; 
-    pointer-events: none; 
-    opacity: 0; 
-    transition: opacity 0.3s ease;
-}
-
 .slider-productos .flecha-slider {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
-    z-index: 10; 
+    z-index: 10;
     cursor: pointer;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 32px; 
+    background-size: 28px;
     opacity: 0; 
-    transition: opacity 0.3s ease, transform 0.2s ease;
+    pointer-events: auto;
+    transition: opacity 0.3s ease,  transform 0.2s ease;
 }
+
 .slider-productos:hover .flecha-slider,
 .slider-productos:hover .slider-degradado {
     opacity: 1; 
@@ -530,7 +547,7 @@ body{
 }
 
 .flecha-izq{
-    left: 20px;
+    left: -90px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2322396B'%3E%3Cpath d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'/%3E%3C/svg%3E");
 }
 .flecha-der{
@@ -555,12 +572,12 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 .tarjeta-producto:hover { 
     border-color: rgba(34, 57, 107, 0.2); 
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.06); 
+     
 }
 
 .producto-imagen-zona { 
-    width: 100%; 
-    height: 115px; 
+   width: 100%; 
+    height: 90px; 
     overflow: visible; 
     display: flex; 
     justify-content: center; 
@@ -574,14 +591,14 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 .producto-foto { 
-    height: 155px; 
+    height: 195px; 
     width: auto; 
     object-fit: contain; 
-    margin-top: -45px; 
+    margin-top: -55px; 
     margin-bottom: 0;
     position: relative;
     z-index: 5; 
-    transition: transform 0.4s ease;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .tarjeta-producto:hover .producto-foto { 
@@ -589,15 +606,15 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 .producto-texto-zona { 
-    padding: 30px 20px 20px 20px; 
+    padding: 0 20px;
+    line-height: 28px; 
     flex-grow: 1; 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; 
-    align-items: flex-start; 
+    justify-content: center; 
+    align-items: flex; 
     text-align: left; 
-    min-height: 125px; 
-    
+    min-height: 190px; 
     border-left: 1px solid #E4E7ED;
     border-right: 1px solid #E4E7ED;
     border-bottom: 1px solid #E4E7ED; 
@@ -605,12 +622,11 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     box-sizing: border-box;
 }
 
-
 .producto-titulo {
-    font-family: "Oswald", sans-serif;
-    font-size: 18px; 
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px; 
     font-weight: 700;
-    line-height: 22px;
+    line-height: 24px;
     color: var(--azuloscuro);
     margin: 0;
     text-transform: uppercase;
@@ -681,14 +697,13 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     border-left: 1px solid #E4E7ED;
     border-right: 1px solid #E4E7ED;
     border-bottom: 1px solid #E4E7ED; 
-    
-    padding: 15px 24px; 
+    padding: 16px ; 
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
     overflow: hidden; 
     position: relative; 
-    height: 55px; 
+    height: 19.2px; 
     background-color: var(--blanco);
 }
 .producto-estrellas { 
@@ -700,5 +715,4 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 .producto-estrella-png { 
     width: 16px; 
     height: 16px; 
-    object-fit: contain; 
-}
+    object-fit: contain; }
