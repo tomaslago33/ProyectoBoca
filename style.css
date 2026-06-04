@@ -429,25 +429,6 @@ body{
     --blanco:#FFFFFF;
 }
 
-.canalboca{
-    background-color: var(--amarillo);
-    flex-flow: column;
-    display: flex;
-    width: 70%;
-    margin: 20px 10px 20px 20px;
-}
-
-.canal-cabecera{
-    color: var(--azuloscuro);
-    font:"Akzidenz Cnd", Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.canal-cabecera img{
-    margin: 5px;
-}
 
 .botonvivo{
 font-family: Akzidenz, Arial, sans-serif;
@@ -489,6 +470,7 @@ flex-direction: row;
 opacity: 1;
 transform: matrix(1, 0, 0, 1, 0, 0);
 }
+
 
 /*.linkcanal{
     font-family: Akzidenz, Arial, sans-serif;
@@ -578,4 +560,193 @@ transform: matrix(1, 0, 0, 1, 0, 0);
     100%{
         transform: translateX(0) scaleX(1);
     }
+}
+
+.seccion-multimedia-boca {
+    max-width: 1450px;
+    margin: 40px auto;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 25px; 
+    box-sizing: border-box;
+}
+
+/* --- BLOQUE IZQUIERDO --- */
+.canalboca {
+    background-color: var(--amarillo);
+    width: 72%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    flex-flow: column;
+    margin: 20px 10px 20px 20px;
+}
+
+.canal-cabecera {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
+    color: var(--azuloscuro);
+    font:"Akzidenz Cnd", Arial, sans-serif;
+    gap: 15px;
+}
+
+.canal-cabecera img{
+    margin: 5px;
+}
+
+.titulo-canal {
+    color: var(--azuloscuro);
+    font:"Akzidenz Cnd", Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+
+
+/* LAS TARJETAS DE VIDEOS */
+.canal-videos {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+
+.video-tarjeta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+.video-imagen-contenedor {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-foto-portada {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.pie-video {
+    padding-top: 15px;
+}
+
+.video-meta {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    color: var(--azuloscuro);
+    margin: 0 0 8px 0;
+    font-weight: 500;
+}
+
+.pie-noticia {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+    color: var(--azuloscuro);
+    margin: 0;
+}
+
+/* REDES SOCIALES */
+.canal-pie-redes {
+    margin-top: auto; 
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.hashtag-redes {
+    font-family: "Oswald", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--azuloscuro);
+}
+
+.iconos-redes {
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+    color: var(--azuloscuro);
+}
+
+/* --- BLOQUE DERECHO --- */
+.revistaboca {
+    background-color: var(--amarillo);
+    width: 28%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.revista-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.titulo-revista {
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--azuloscuro);
+    text-transform: uppercase;
+}
+
+.link-ver-todas {
+    font-family: "Oswald", sans-serif;
+    color: var(--azuloscuro);
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 2px solid var(--azuloscuro);
+}
+
+.revista-portada-zona {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.revista-foto-tapa {
+    width: 100%;
+    height: auto;
+    max-width: 320px; 
+    display: block;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2); 
+}
+
+.revista-pie-descarga {
+    margin-top: auto; 
+    padding-top: 30px;
+    text-align: right;
+    width: 100%;
+}
+
+.link-descargar-revista {
+    font-family: "Oswald", sans-serif;
+    color: var(--azuloscuro);
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 2px solid var(--azuloscuro);
+    display: inline-block;
 }
