@@ -434,10 +434,6 @@ body{
   width: 100%;
 }
 
-.noticias-tarjetas img:hover{
-  width: 80%;
-  transition-duration: 0.60s;
-}
 
 .box-noticias{
   background: var(--azulclaro);
@@ -471,11 +467,7 @@ body{
   display: flex;
 }
 
-.noticias-titulo h1 {
-  color: #FFFFFF;
-  font-size: 180%;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
-}
+
 
 .noticias-titulo a{
   padding-top: 1.5%;
@@ -492,3 +484,69 @@ body{
   width: 90%;
 }
 
+.noticia-card{
+    position: relative;
+    overflow: hidden;
+
+    display: block;
+    background: var(--azuloscuro);
+    color: white;
+    text-decoration: none;
+}
+
+.hover-bar{
+    position: absolute;
+
+    left: 0;
+    bottom: -60px;
+
+    width: 100%;
+    height: 60px;
+
+    background: #f5d31f;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding-right: 25px;
+
+    transition: bottom .35s ease;
+}
+
+.hover-bar span{
+    color: #111;
+    font-weight: 700;
+
+    opacity: 0;
+    transform: translateY(15px);
+
+    transition:
+        opacity .2s ease,
+        transform .3s ease;
+}
+
+.noticia-card:hover .hover-bar{
+    bottom: 0;
+}
+
+.noticia-card:hover .hover-bar span{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.titunoti{
+    transition: transform .35s ease;
+}
+
+.noticia-card:hover .titunoti{
+    transform: translateY(-25px);
+}
+
+.noticia-card img{
+    transition: transform .4s ease;
+}
+
+.noticia-card:hover img{
+    transform: scale(1.03);
+}
