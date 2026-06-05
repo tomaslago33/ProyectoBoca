@@ -539,7 +539,7 @@ body{
 }
 
 .noticia-card:hover .titunoti{
-    transform: translateY(-25px);
+    transform: translateY(-70px);
 }
 
 .noticia-card img{
@@ -547,7 +547,21 @@ body{
 }
 
 .noticia-card:hover img{
-    transform: scale(1.03);
+    transform: scaleY(1.03);
+}
+
+.noticia-card:hover .futsal{
+    transform: translateY(-70px);
+    transition: .35s ease;
+}
+
+.cat-fecha{
+    transition: transform .35s ease;
+}
+
+.noticia-card:hover .cat-fecha{
+    transform: translateY(-70px);
+
 }
 
 .linknoticias {
