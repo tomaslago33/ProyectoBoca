@@ -538,6 +538,15 @@ body{
     margin: 15px 0px 15px 10px;
 }
 
+.titunoticia{
+    transition: transform .35s ease;
+    border-top: 1px solid gray;
+}
+
+.noticia-card:hover .titunoticia{
+    transform: translateY(-70px);
+}
+
 .noticia-card:hover .titunoti{
     transform: translateY(-70px);
 }
@@ -555,8 +564,9 @@ body{
     transition: .35s ease;
 }
 
-.cat-fecha{
-    transition: transform .35s ease;
+.noticia-card:hover .reserva{
+    transform: translateY(-70px);
+    transition: .35s ease;
 }
 
 .noticia-card:hover .cat-fecha{
@@ -618,6 +628,7 @@ body{
   display: flex;
   justify-content: space-between;
   width: 100%;
+  transition: transform .35s ease;
 }
 
 .cat{
