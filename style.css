@@ -429,9 +429,14 @@ body{
     --blanco:#FFFFFF;
 }
 
-.noticias-tarjetas img{
-  justify-self: center;
-  width: 100%;
+.imgnoti{
+  height: 75%;
+}
+.imgnoti img{
+    justify-self: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -568,6 +573,7 @@ body{
     transform: translateY(-70px);
     transition: .35s ease;
 }
+
 
 .noticia-card:hover .cat-fecha{
     transform: translateY(-70px);
