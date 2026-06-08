@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;700&family=Roboto:wght@400;500;700&display=swap');*{
 }
 
-
-
 .menu{
     pointer-events: auto; 
     display: flex;
@@ -47,6 +45,7 @@
 .navbar-brand{
     margin-right:0;
 }
+
 .menu a{
     text-decoration: none;
     color: #ffffffa3;
@@ -60,8 +59,7 @@
     width: 160px; 
     text-align: left; 
     transition: color 0.1s ease;
-        
-    }  
+}  
     
 .menu nav {
     background: transparent !important;
@@ -272,6 +270,7 @@ html, body {
     background-color: #F9BE3D;
     margin: 0;
 }
+
 body{
     background-color: var(--azulclaro);
     font-family: Arial, sans-serif;
@@ -469,9 +468,20 @@ position: static;
 flex-direction: row;
 opacity: 1;
 transform: matrix(1, 0, 0, 1, 0, 0);
+animation: latido 1.5s infinite ease-in-out;
 }
 
-
+@keyframes latido {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* La imagen crece un 10% */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 .linkcanal{
     position: relative;
@@ -840,4 +850,11 @@ transform: matrix(1, 0, 0, 1, 0, 0);
     padding-bottom: 2px;
     border-bottom: 2px solid var(--azuloscuro);
     display: inline-block;
+}
+
+.seccion-multimedia-boca {
+    border-bottom: 6px solid var(--amarillo);
+    padding-top: 48px;
+    padding-bottom: 80px;
+    position: relative;
 }
