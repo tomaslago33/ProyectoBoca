@@ -433,30 +433,35 @@ body{
 .seccion-shop{
     width: 100%;
     background-color: var(--blanco);
-    padding: 80px 0px; 
-    position: relative;
+    padding: 60px 0px; 
+    position: right;
 }
 
 .contenedor-shop{
     width: 100%;
-    padding: 0 60px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 ;
+    padding: 0px 40px ;
+    box-sizing: border-box;
 }
 
 .encabezado-shop{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    text-align: center;
+    text-align: left;
     margin-bottom: 40px;
-    max-width: 1450px;
+    
     margin-left: auto;
     margin-right: auto;
-    padding: 0 70px;
+    padding: 0 40px;
     box-sizing: border-box;
 }
 
 .titulo-shop{
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 36px; 
     font-weight: 700;
     line-height: 1.1;
@@ -508,7 +513,7 @@ body{
     content: "";
     position: absolute;
     top: 0;
-    right: 0;
+    right: -370px;
     bottom: 0;
     width: 120px; 
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
@@ -517,7 +522,10 @@ body{
 .slider-productos {
     position: relative; 
     padding: 50px 0 20px 0; 
-    max-width: 1450px;
+    width: 100%;
+    
+    margin-left: 0;
+    margin-right: auto;
     margin: 0 auto;
     overflow: visible !important;
 }
@@ -526,13 +534,13 @@ body{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 80px;
+    width: 60px;
     height: 80%;
     z-index: 10;
     cursor: pointer;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 50px;
+    background-size: 40px;
     opacity: 0; 
     pointer-events: auto;
     transition: opacity 0.3s ease,  transform 0.2s ease;
@@ -553,7 +561,7 @@ body{
 }
 .flecha-der{
   position: absolute;
-  right: 4%;
+  right: -350px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2322396B'%3E%3Cpath d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'/%3E%3C/svg%3E");
 }
 
@@ -643,56 +651,65 @@ body{
 }
 
 
-.link-subrayado2::before {
-    content: "";
-    position: absolute;
-    bottom: 0; 
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--azulclaro);
-    z-index: 2;
-    transform: scaleX(0); 
-    transform-origin: right; 
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.link-subrayado2:hover::before {
-    transform: scaleX(1);
-    transform-origin: left;
-    transition-delay: 0.2s;
-}
-
-.link-subrayado2:hover::after {
-    transform: scaleX(0);
-    transform-origin: right;
-}
-
-.link-subrayado2::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--azulclaro);
-    
-    transform: scaleX(1); 
-    transform-origin: right; 
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.link-subrayado2 {
-    font-family: "Oswald", sans-serif;
-    font-size: 16px; 
-    font-weight: 700;
-    color: var(--azulclaro); 
-    text-decoration: none;
+.linkcanal {
     position: relative;
-    padding-bottom: 5px; 
-    cursor: pointer;
-    white-space: nowrap; 
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    color: var(--azuloscuro);
+    font-weight: 600;
+    font-size: 18px;
     display: inline-block;
+    cursor: pointer;
+    align-items: center;
+    margin-left: auto !important; 
+}
+
+.linkcanal::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    background: currentColor; 
+    transform: translateX(0);
+}
+
+.linkcanal.hover-in::after,
+.linkcanal.hover-out::after {
+    animation-duration: .45s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.linkcanal.hover-in::after {
+    animation-name: underlineMove;
+}
+
+.linkcanal.hover-out::after {
+    animation-name: underlineMove;
+}
+
+@keyframes underlineMove {
+    0%{
+        transform: translateX(0) scaleX(1);
+    }
+
+    50%{
+        transform: translateX(50%) scaleX(0);
+    }
+
+    51%{
+        transform: translateX(-50%) scaleX(0);
+    }
+
+    100%{
+        transform: translateX(0) scaleX(1);
+    }
+}
+
+.boton-ir-shop { 
+    margin-right: -30px !important;  
 }
 
 .producto-botonera { 
