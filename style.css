@@ -1428,3 +1428,25 @@ animation: latido 1.5s infinite ease-in-out;
     transform-origin: left center;
     z-index: 9999;
 }
+
+.cabj_box{
+justify-content: space-between;
+display: flex;
+padding: 0 3.2rem 0 3.2rem;
+align-items: center;
+}
+
+.cabj_box h1{
+    color : var(--amarillo);
+    font-family: monospace ;
+    font-size: 7rem;
+    padding-right: 1.5rem;
+
+}
+
+.barraamarilla{
+    background-color: var(--amarillo);
+    width: 75%;
+    height: 7rem;
+}
+
