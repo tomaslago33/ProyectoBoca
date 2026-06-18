@@ -43,3 +43,18 @@ carousel.addEventListener("mousemove", (e) => {
 
 });
 carousel.scrollLeft = 1;
+
+const progressBar = document.querySelector('.scroll-bar');
+
+window.addEventListener('scroll', () => {
+
+    const scrollTop = window.scrollY;
+
+    const scrollHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+    const progress = scrollTop / scrollHeight;
+
+    progressBar.style.transform = `scaleX(${progress})`;
+
+});

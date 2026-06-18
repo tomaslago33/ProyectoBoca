@@ -1,23 +1,15 @@
+// --- 1. SELECCIÓN DE ELEMENTOS (CARRUSEL PRINCIPAL) ---
 const track = document.getElementById('track');
 let diapositivas = document.querySelectorAll('.diapositiva');
 let indiceActual = 0;
-
 let isDragging = false;
 let startPos = 0;
-let currentTranslate = 0;
-let prevTranslate = 0;
-let animationID = 0;
 
-// 1. EVENTOS DE MOUSE
-// click (Mano abierta -> Mano cerrada)
+// --- 2. EVENTOS DE ARRASTRE (DRAG) ---
 track.addEventListener('mousedown', dragStart);
-// sueltar el click
 track.addEventListener('mouseup', dragEnd);
-//  movimiento de mouse
 track.addEventListener('mousemove', dragAction);
-//  el mouse sale del carrusel
 track.addEventListener('mouseleave', dragEnd);
-
 
 function dragStart(event) {
     isDragging = true;
@@ -31,7 +23,9 @@ function dragAction(event) {
     const currentPosition = event.clientX;
     const diff = currentPosition - startPos;
     
-    const desplazamientoManual = (indiceActual * -window.innerWidth) + diff;
+    const anchoDiapositiva = diapositivas[0].getBoundingClientRect().width;
+    const desplazamientoManual = (indiceActual * -anchoDiapositiva) + diff;
+    
     track.style.transform = `translateX(${desplazamientoManual}px)`;
 }
 
@@ -42,6 +36,7 @@ function dragEnd(event) {
     const endPos = event.clientX;
     const movedBy = endPos - startPos;
 
+   
     if (movedBy < -100 && indiceActual < diapositivas.length - 1) {
         indiceActual++;
     } else if (movedBy > 100 && indiceActual > 0) {
@@ -50,24 +45,22 @@ function dragEnd(event) {
     actualizarPosicion();
 }
 
-// 2. FUNCIÓN PARA ACTUALIZAR EL MOVIMIENTO 
+// --- 3. FUNCIÓN DE ACTUALIZACIÓN  ---
 function actualizarPosicion() { 
     const anchoDiapositiva = diapositivas[0].getBoundingClientRect().width;
     const desplazamiento = indiceActual * -anchoDiapositiva;
-    track.style.transition = `transform 0.8s cubic-bezier(0.45, 0, 0.55, 1)`;
+    track.style.transition = 'transform 0.8s cubic-bezier(0.45, 0, 0.55, 1)';
     track.style.transform = `translateX(${desplazamiento}px)`;
 }
 
-window.addEventListener(`resize` , ()=>{
-    track.style.transition= 'none';
+
+window.addEventListener('resize', () => {
+    track.style.transition = 'none';
     actualizarPosicion();
 });
 
-setInterval(moverAutomaticamente, 5000);
-
-
-// 3. MOVIMIENTO AUTOMÁTICO 
-  function moverAutomaticamente() {
+// --- 4. MOVIMIENTO AUTOMÁTICO  ---
+function moverAutomaticamente() {
     if (!isDragging) { 
         indiceActual++;
         if (indiceActual >= diapositivas.length) {
@@ -76,6 +69,51 @@ setInterval(moverAutomaticamente, 5000);
         actualizarPosicion();
     }
 }
-
-// movimiento cada 5 segundos
+// 
 setInterval(moverAutomaticamente, 5000);
+
+// --- 5. INICIALIZACIÓN DE BOCA SHOP (SWIPER.JS) ---
+document.addEventListener("DOMContentLoaded", function() {
+    const swiperShop = new Swiper(".slider-productos", {
+        direction: "horizontal",
+        slidesPerView: 1.3, 
+        slidesPerGroup: 1,
+        spaceBetween: 16,
+        loop: false,
+        centeredSlides: false,
+        mousewheel: {
+            forceToAxis: true
+        },
+        speed: 300,
+        navigation: {
+            nextEl: ".flecha-slider.flecha-der", 
+            prevEl: ".flecha-slider.flecha-izq"  
+        },
+        breakpoints: {
+            480: { slidesPerView: 1.8 },
+            768: { slidesPerView: 2.5 },
+            992: { slidesPerView: 3.5 },
+            1300: { slidesPerView: 4.5 }, 
+            1600: { slidesPerView: 5.5 }
+        },
+        on: {
+            init: function () {
+                controlarFlechaIzquierda(this);
+            },
+            slideChange: function () {
+                controlarFlechaIzquierda(this);
+            }
+        }
+    });
+
+    function controlarFlechaIzquierda(swiper) {
+        const flechaIzq = document.querySelector(".flecha-slider.flecha-izq");
+        if (flechaIzq) {
+            if (swiper.isBeginning) {
+                flechaIzq.style.display = "none";
+            } else {
+                flechaIzq.style.display = "block";
+            }
+        }
+    }
+});
