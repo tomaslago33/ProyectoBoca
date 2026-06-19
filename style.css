@@ -1428,3 +1428,103 @@ animation: latido 1.5s infinite ease-in-out;
     transform-origin: left center;
     z-index: 9999;
 }
+
+.seccion-fundacion{
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.contenedor-fundacion {
+    display: flex;
+    width: 97%;
+    margin: auto;
+    border: 0.0625rem solid rgba(255, 255, 255, 0.15);
+    background-color: var(--azulclaro);
+    min-height: 16.5rem; 
+    box-sizing: border-box;
+}
+
+.fundacion-imagen-zona {
+    width: 42rem;    
+    overflow: hidden;
+    display: flex;
+    flex-shrink: 0;   
+}
+
+.fundacion-imagen-zona img.fund_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.fundacion-bloque {
+    flex-grow: 1; 
+    padding: 2rem;
+    background-color: var(--azulclaro);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.fundacion-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+.fundacion-info h2 {
+    color: var(--amarillo);
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem; 
+    line-height: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.fundacion-info h2 span {
+    color: var(--blanco);
+}
+.fundacion-contenido {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: flex-end; 
+    width: 100%;
+    gap: 1.5rem;
+}
+
+.fundacion-contenido p{
+    color: var(--blanco);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem; 
+    line-height: 1.375rem; 
+    font-weight: 400;
+    max-width: 40rem; 
+    margin: 0;
+    justify-content: space-between;
+}
+
+.logo-fundacion-boca {
+    height: 5rem;
+    width: 5.5rem;
+    object-fit: contain;
+    display: block;
+}
+
+.fundacion-btn {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;                     /* 16px oficiales */
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.8125rem 1.5rem;           /* Ajuste para lograr los 50px de alto totales */
+    white-space: nowrap;
+    display: block;
+    box-sizing: border-box;
+    position: static; 
+    border-radius: 0;
+}
