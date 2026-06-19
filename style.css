@@ -321,11 +321,11 @@ body{
 }
 
 .sponsors img.logo-betson{
-  height: 40px;
+  height: 18px;
 }
 
 .sponsors img.logo-directv{
-  height: 25px;
+  height: 18px;
 }
 
 .sponsors img.logo-centrohogar{
@@ -1450,3 +1450,11 @@ align-items: center;
     height: 7rem;
 }
 
+.subsponsor2{
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 2rem;
+    gap: 2rem;
+}
