@@ -1429,3 +1429,13 @@ animation: latido 1.5s infinite ease-in-out;
     z-index: 9999;
 }
 
+.noticia-card2{
+    position: relative;
+    overflow: hidden;
+    width: 150%;
+    display: block;
+    background: var(--azulclaro);
+    color: white;
+    text-decoration: none;
+}
+
