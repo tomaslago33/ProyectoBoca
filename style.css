@@ -1432,10 +1432,50 @@ animation: latido 1.5s infinite ease-in-out;
 .noticia-card2{
     position: relative;
     overflow: hidden;
-    width: 150%;
     display: block;
     background: var(--azulclaro);
     color: white;
     text-decoration: none;
+    border: 1px solid gray;
 }
 
+.noticia-card2:hover .hover-bar{
+    bottom: 0;
+}
+
+.noticia-card2:hover .hover-bar span{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.noticia-card2:hover .titunoticia{
+    transform: translateY(-70px);
+}
+
+.noticia-card2:hover .titunoti{
+    transform: translateY(-70px);
+}
+
+.noticia-card2 img{
+    transition: transform .4s ease;
+}
+
+.noticia-card2:hover img{
+    transform: scaleY(1.03);
+}
+
+.noticia-card2:hover .futsal{
+    transform: translateY(-70px);
+    transition: .35s ease;
+}
+
+.noticia-card2:hover .reserva{
+    transform: translateY(-70px);
+    transition: .35s ease;
+}
+
+
+.noticia-card2:hover .cat-fecha{
+    transform: translateY(-70px);
+
+}
