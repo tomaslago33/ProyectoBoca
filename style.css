@@ -1479,3 +1479,15 @@ animation: latido 1.5s infinite ease-in-out;
     transform: translateY(-70px);
 
 }
+
+.slider-productos2 {
+    position: relative; 
+    padding: 3rem 0 1.5rem 0;
+    width: 100%;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding-right: 5% !important;
+    padding-left: 2.5% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+}
