@@ -1509,7 +1509,7 @@ animation: latido 1.5s infinite ease-in-out;
 }
 
 .slider-productos2:hover .flecha-slider,
-.slider-productos2:hover .slider-degradado2 {
+.slider-productos2:hover .sliderdegradado2 {
     opacity: 1; 
 }
 
@@ -1543,7 +1543,7 @@ animation: latido 1.5s infinite ease-in-out;
     background-size: 60%;
 }
 
-.slider-degradado2 {
+.sliderdegradado2 {
     position: absolute;
     top: 0px; 
     left: 0;
@@ -1555,18 +1555,24 @@ animation: latido 1.5s infinite ease-in-out;
     transition: opacity 0.3s ease;
 }
 
-.slider-degradado2::before {
+.sliderdegradado2::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
-    width: 8%; 
-    background: linear-gradient(268deg, rgba(34, 57, 107, 0.98), rgba(34, 57, 107, 0) 99%);
+    width: 8%;
+    opacity: var(--opacidad-izq, 1);
+    transition: opacity .3s ease;
+    background: linear-gradient(
+        268deg,
+        rgba(34, 57, 107, 0.98),
+        rgba(34, 57, 107, 0) 99%
+    );
 }
 
 /* 2. EL DEGRADADO DE LA DERECHA */
-.slider-degradado2::after {
+.sliderdegradado2::after {
     content: "";
     position: absolute;
     top: 0;

@@ -24,15 +24,17 @@ document.addEventListener("DOMContentLoaded", function() {
         on: {
             init: function () {
                 controlarFlechaIzquierda(this);
+                controlarDegradado(this);
             },
             slideChange: function () {
                 controlarFlechaIzquierda(this);
+                controlarDegradado(this);
             }
         }
     });
 
     function controlarFlechaIzquierda(swiper) {
-        const flechaIzq = document.querySelector(".flecha-slider.flecha-izq");
+        const flechaIzq = swiper.navigation.prevEl;
         if (flechaIzq) {
             if (swiper.isBeginning) {
                 flechaIzq.style.display = "none";
@@ -42,3 +44,14 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
+
+function controlarDegradado(swiper) {
+    const degradado = swiper.el.querySelector(".sliderdegradado2");
+
+    if (!degradado) return;
+
+    degradado.style.setProperty(
+        "--opacidad-izq",
+        swiper.isBeginning ? "0" : "1"
+    );
+}
