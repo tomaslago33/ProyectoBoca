@@ -1432,6 +1432,7 @@ animation: latido 1.5s infinite ease-in-out;
 .seccion-fundacion{
     width: 100%;
     margin-bottom: 2.5rem;
+    border-bottom: var(--blanco);
 }
 
 .contenedor-fundacion {
@@ -1445,7 +1446,7 @@ animation: latido 1.5s infinite ease-in-out;
 }
 
 .fundacion-imagen-zona {
-    width: 42rem;    
+    width: 40%;    
     overflow: hidden;
     display: flex;
     flex-shrink: 0;   
@@ -1479,7 +1480,7 @@ animation: latido 1.5s infinite ease-in-out;
 .fundacion-info h2 {
     color: var(--amarillo);
     font-family: 'Oswald', sans-serif;
-    font-size: 2rem; 
+    font-size: 1.5rem; 
     line-height: 2rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -1501,8 +1502,8 @@ animation: latido 1.5s infinite ease-in-out;
 .fundacion-contenido p{
     color: var(--blanco);
     font-family: 'Roboto', sans-serif;
-    font-size: 1rem; 
-    line-height: 1.375rem; 
+    font-size: 0.75rem; 
+    line-height: 1.3rem; 
     font-weight: 400;
     max-width: 40rem; 
     margin: 0;
@@ -1518,13 +1519,176 @@ animation: latido 1.5s infinite ease-in-out;
 
 .fundacion-btn {
     font-family: Arial, sans-serif;
-    font-size: 1rem;                     /* 16px oficiales */
+    font-size: 0.80rem;                     
     font-weight: 500;
     text-decoration: none;
-    padding: 0.8125rem 1.5rem;           /* Ajuste para lograr los 50px de alto totales */
+    padding: 0.8125rem 1.5rem;           
     white-space: nowrap;
     display: block;
     box-sizing: border-box;
     position: static; 
     border-radius: 0;
+}
+
+.seccion-copas {
+    border-top: var(--blanco);
+    width: 100%;
+    background-color: var(--amarillo);
+    padding: 10rem 0rem;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.titulo-copas-principal {
+    font-family: "Akzidenz Cnd", 'Oswald', sans-serif;
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    color: var(--azuloscuro);
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0rem 0rem 2rem 0rem;
+    letter-spacing: -0.0313rem;
+}
+
+.slider-copas {
+    position: relative;
+    width: 90%;
+    margin: 0rem auto !important;
+    padding: 1rem 2.5% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+}
+
+
+.tarjeta-copa {
+    background-color: transparent;
+    border: 0.0625rem solid rgba(34, 57, 107, 0.15);
+    border-radius: 0.5rem 0.5rem 2rem 0.5rem;
+    height: 30.25rem; 
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    box-sizing: border-box;
+    position: relative; 
+    overflow: hidden;
+    z-index: 1;
+    transition: background-color 0.4s ease, border-color 0.4s ease;
+    width: 14.3rem;
+    padding: 0;
+    margin: 0 1rem 0 0;
+}
+
+.tarjeta-copa::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: var(--bg-foto);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    opacity: 0;
+    z-index: -1;
+    border-radius: 0.5rem 0.5rem 2rem 0.5rem;
+    transition: opacity 0.4s ease;
+}
+
+.tarjeta-copa:hover {
+    background-color: var(--azuloscuro);
+    border-color: transparent;
+}
+
+.tarjeta-copa:hover::before {
+    opacity: 0.3;
+}
+
+.tarjeta-copa:hover .copa-cantidad,
+.tarjeta-copa:hover .copa-nombre {
+    color: var(--blanco);
+}
+
+.tarjeta-copa:hover .copa-bloque-superior {
+    border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.2);
+}
+
+.tarjeta-copa:hover .trofeo-azul { display: none !important; }
+.tarjeta-copa:hover .trofeo-blanco { display: block !important; }
+
+
+.copa-bloque-superior {
+    width: 100%;
+    height: 9.75rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    box-sizing: border-box;
+    border-bottom: 0.0625rem solid rgba(34, 57, 107, 0.15);
+    transition: border-color 0.4s ease;
+}
+
+.copa-bloque-superior img {
+    height: 6.3125rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    width: 2.5rem;
+    object-fit: contain;
+}
+
+.trofeo-azul { display: block; }
+.trofeo-blanco { display: none; }
+
+
+.copa-bloque-inferior {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.copa-cantidad {
+    font-family: "Akzidenz Cnd", 'Oswald', sans-serif;
+    font-size: 4.5rem;
+    line-height: 13rem;
+    font-weight: 700;
+    color: var(--azuloscuro);
+    margin-bottom: 0.75rem;
+    transition: color 0.4s ease;
+
+}
+
+.copa-nombre {
+    font-family: "Akzidenz Cnd", 'Oswald', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.3;
+    font-weight: 700;
+    color: var(--azuloscuro);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+
+.slider-copas .swiper-slide {
+    width: 13.5rem !important; 
+    height: auto;
+}
+
+
+.slider-copas:hover .flecha-slider,
+.slider-copas:hover .slider-degradado {
+    opacity: 1;
+}
+
+.slider-copas .slider-degradado.degradado-amarillo::before {
+    background: linear-gradient(to right, #F9BE3D 0%, rgba(249, 190, 61, 0) 100%);
+}
+
+.slider-copas .slider-degradado.degradado-amarillo::after {
+    background: linear-gradient(to left, #F9BE3D 0%, rgba(249, 190, 61, 0) 100%);
 }
