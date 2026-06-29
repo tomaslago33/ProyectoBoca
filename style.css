@@ -459,7 +459,7 @@ body{
 }
 
 .noticias-tarjetas a {
-  border: 1px solid gray;
+  border: 1px solid rgba(255,255,255,0.15);
   width: 48%;
 }
 
@@ -1468,7 +1468,7 @@ align-items: center;
     display: flex;
     align-items: center;
     width: max-content;
-    animation: scroll 30s linear infinite;
+    animation: scroll 38s linear infinite;
 }
 
 .slide {
@@ -1492,6 +1492,7 @@ align-items: center;
     width: 100%;
     overflow: hidden;
     position: relative;
+    margin-bottom: 40px;
 }
 
 .carrusel_sponsors2::before {
@@ -1528,4 +1529,33 @@ align-items: center;
         var(--azulclaro) 20%,
         rgba(255,255,255,0) 100%
     );
+}
+
+.sponsors2_tarjetas{
+    display: flex;
+    justify-content: space-between 0;
+    gap: 25px;
+    align-items: center;
+    width: 100%;
+    padding: 0 2rem 0 2rem;
+
+}
+
+.tarjeta_sponsors2{
+    border: 1px solid rgba(255,255,255,0.15);
+    width: 30%;
+    height: 25rem;
+    
+}
+
+.box_tarjeta{
+    height: 85%;
+    width: 75%;
+    border: 1px solid rgba(223, 7, 7, 0.644);
+    margin: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+
 }
