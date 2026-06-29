@@ -1583,3 +1583,9 @@ animation: latido 1.5s infinite ease-in-out;
     pointer-events: none;
 }
 
+.carrusel-noticia{
+    padding: 20px 0px 40px ;
+    border-bottom: 6px solid var(--amarillo);
+    position: relative;
+}
+
