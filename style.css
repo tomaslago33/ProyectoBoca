@@ -1589,3 +1589,17 @@ animation: latido 1.5s infinite ease-in-out;
     position: relative;
 }
 
+.proximopartido{
+    background-color: var(--blanco);
+    padding-top: 40px;
+}
+
+.titulo-partido{
+    font-family: 'Akzidenz Cnd', Arial, sans-serif;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 700;
+    color: var(--azuloscuro);
+    width: 35%;
+    margin: 0px 0px 0px 45px;
+}
