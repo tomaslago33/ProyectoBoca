@@ -99,6 +99,9 @@
     color: white;
 }
 
+body::-webkit-scrollbar {
+  display: none; 
+}
 
 html, body {
     margin:0;
@@ -411,7 +414,7 @@ body{
   right: 35px;
   bottom: 45px;
   background: var(--amarillo);
-  color: #111;
+  color: var(--azulmedio);
   text-decoration: none;
   padding: 18px 30px;
   font-weight: bold;
@@ -1542,20 +1545,84 @@ align-items: center;
 }
 
 .tarjeta_sponsors2{
-    border: 1px solid rgba(255,255,255,0.15);
-    width: 30%;
+    width: 30.2%;
     height: 25rem;
-    
+    border: 1px solid rgba(255,255,255,0.15);
+
 }
 
+
 .box_tarjeta{
+    position: relative;
     height: 85%;
-    width: 75%;
-    border: 1px solid rgba(223, 7, 7, 0.644);
+    width: 85%;
     margin: 2.5rem;
     display: flex;
     flex-direction: column;
     align-items: left;
     text-align: left;
 
+}
+
+.box_tarjeta h2{
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    font-style: bold;
+    font-weight: 700;
+    margin: 5px;
+
+}
+
+.box_tarjeta h1{
+    color: var(--amarillo);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    font-style: bold;
+    margin: 5px;
+}
+
+.box_tarjeta span{
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 5px;
+}
+
+.box_tarjeta img{
+    display: flex;
+}
+
+.promo-btn2 {
+  position: absolute;
+  bottom: 1px;
+  background: var(--amarillo);
+  color: var(--azulmedio);
+  text-decoration: none;
+  padding: 18px 30px;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.tarjeta_sponsors2::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at left center,
+            var(--azulmedio) 0%,
+            var(--azulmedio) 35%,
+            var(--azulmedio) 60%,
+            transparent 100%
+        ),
+
+        linear-gradient(
+            90deg,
+            var(--azuloscuro) 0%,
+            var(--azuloscuro) 45%,
+            var(--azuloscuro) 100%
+        );
 }
