@@ -1609,3 +1609,18 @@ animation: latido 1.5s infinite ease-in-out;
     margin: 0px 20px 0px 20px ;
 }
 
+.torneo a{
+    width: 20%;
+    font-family: 'Akzidenz Cnd',Arial, sans-serif;
+    color: #222222;
+    margin: 0px 0px 0px 60px;
+    text-decoration: none;
+}
+
+.copa a{
+    width: 20%;
+    font-family: 'Akzidenz Cnd',Arial, sans-serif;
+    color: #222222;
+    margin: 0px 0px 0px 60px;
+    text-decoration: none;
+}
