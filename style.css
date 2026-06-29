@@ -1534,7 +1534,7 @@ animation: latido 1.5s infinite ease-in-out;
     border-top: var(--blanco);
     width: 100%;
     background-color: var(--amarillo);
-    padding: 10rem 0rem;
+    padding: 6rem 0rem 1.7rem ;
     position: relative;
     box-sizing: border-box;
 }
@@ -1549,16 +1549,6 @@ animation: latido 1.5s infinite ease-in-out;
     margin: 0rem 0rem 2rem 0rem;
     letter-spacing: -0.0313rem;
 }
-
-.slider-copas {
-    position: relative;
-    width: 90%;
-    margin: 0rem auto !important;
-    padding: 1rem 2.5% !important;
-    box-sizing: border-box !important;
-    overflow: hidden !important;
-}
-
 
 .tarjeta-copa {
     background-color: transparent;
@@ -1605,6 +1595,7 @@ animation: latido 1.5s infinite ease-in-out;
 .tarjeta-copa:hover .copa-cantidad,
 .tarjeta-copa:hover .copa-nombre {
     color: var(--blanco);
+
 }
 
 .tarjeta-copa:hover .copa-bloque-superior {
@@ -1644,12 +1635,14 @@ animation: latido 1.5s infinite ease-in-out;
 
 
 .copa-bloque-inferior {
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
     box-sizing: border-box;
+    transform: translateY(1rem); 
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .copa-cantidad {
@@ -1673,22 +1666,116 @@ animation: latido 1.5s infinite ease-in-out;
     margin: 0;
 }
 
-
-.slider-copas .swiper-slide {
-    width: 13.5rem !important; 
-    height: auto;
+.tarjeta-copa:hover .copa-bloque-inferior {
+    transform: translateY(-2rem); 
 }
 
+.slider-copas {
+    position: relative;
+    width: 100%;
+    margin: 0rem auto !important;
+    padding: 1rem 5% !important;
+    box-sizing: border-box !important;
+}
+
+.slider-copas .swiper-wrapper {
+    box-sizing: border-box;
+}
+
+.slider-copas .swiper-slide {
+    width: 14.3rem !important; 
+    height: auto;
+    box-sizing: border-box;
+    
+}
+
+
+.slider-copas .flecha-slider,
+.slider-copas .slider-degradado {
+    opacity: 0;
+    transition: opacity 0.3 ease;
+    z-index: 10;
+}
+
+.slider-copas .flecha-slider {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4rem;
+    height: 80%;
+    z-index: 10;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0; 
+    pointer-events: auto;
+    transition: opacity 0.3s ease,  transform 0.2s ease;
+}
 
 .slider-copas:hover .flecha-slider,
 .slider-copas:hover .slider-degradado {
-    opacity: 1;
+    opacity: 1; 
 }
 
+.slider-copas .flecha-izq {
+    left: 0; 
+    right: auto !important; 
+    width: 5rem;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2322396B'%3E%3Cpath d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'/%3E%3C/svg%3E") !important;
+    background-position: center left;
+    background-size: 60%;
+}
+.slider-copas .flecha-der {
+    right: 0; 
+    left: auto !important; 
+    width: 5rem;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2322396B'%3E%3Cpath d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'/%3E%3C/svg%3E") !important;
+    background-position: center right;
+    background-size: 60%;
+}
+.slider-copas .slider-degradado {
+   position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 8; 
+    pointer-events: none; 
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
 .slider-copas .slider-degradado.degradado-amarillo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 5%; 
     background: linear-gradient(to right, #F9BE3D 0%, rgba(249, 190, 61, 0) 100%);
 }
 
 .slider-copas .slider-degradado.degradado-amarillo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 8%; 
     background: linear-gradient(to left, #F9BE3D 0%, rgba(249, 190, 61, 0) 100%);
+}
+.slider-copas .flecha-slider:active {
+    transform: translateY(-50%) scale(0.9);
+}
+.linea-separadora-blanca {
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    height: 6px;
+    width: 100%;
+    background-color: var(--blanco);
+    margin: 0;
 }

@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const swiperCopas = new Swiper('.slider-copas', {
     slidesPerView: 'auto', 
-    spaceBetween: 24,      
+    spaceBetween: 16,      
     loop: false, 
     grabCursor: true,
     navigation: {
