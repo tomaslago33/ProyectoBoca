@@ -1607,6 +1607,8 @@ animation: latido 1.5s infinite ease-in-out;
 .agenda{
     width: 90%;
     margin: 0px 20px 0px 20px ;
+    display: flex;
+    text-align: center;
 }
 
 .torneo a{
@@ -1624,3 +1626,37 @@ animation: latido 1.5s infinite ease-in-out;
     margin: 0px 0px 0px 60px;
     text-decoration: none;
 }
+
+.torneo-cabecera{
+    width: 150%;
+    height: 70px;
+    background-color: var(--amarillo);
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px var(--amarillooscuro);
+}
+
+.lpf{
+    padding: 20px 0px 20px 30px;
+}
+
+.escudo{
+    padding: 20px 30px 20px 0px;
+}
+
+.torneo-cuerpo{
+    width: 150%;
+    height: 250px;
+    background-color: var(--amarillo);
+}
+
+.fecha-partido{
+    display: flex;
+    font-family:"Akzidenz Cnd",arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: #222E46;
+    padding: 20px 0px 0px 20px;
+}
+
