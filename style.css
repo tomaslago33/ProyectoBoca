@@ -898,7 +898,7 @@ animation: latido 1.5s infinite ease-in-out;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('/iconos-redes/icon-23.png') no-repeat center / 55px;
+    background: url('/iconos-redes/icon-23.svg') no-repeat center / 55px;
     filter: invert(100%) brightness(150%) !important;
     opacity: 0;
     transform: scale(0.8);
@@ -1778,4 +1778,289 @@ animation: latido 1.5s infinite ease-in-out;
     width: 100%;
     background-color: var(--blanco);
     margin: 0;
+}
+
+.barra-ea-boca{
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    box-sizing: border-box;
+    margin-top: 2rem;
+}
+.barra-ea-sports{
+    width: 95%;
+    background-color: var(--amarillo);
+    padding: 0.9375rem 1.125rem;
+    border-radius: 0rem 0rem 0rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 3.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.boton-ea-sports .ea-sports-contenido{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.barra-ea-sports .ea-sports-contenido img{
+    width: auto;
+    display: block;
+    height: 2.0rem;
+    object-fit: contain;
+}
+
+.barra-ea-sports .boton-juga-ya {
+    background-color: var(--azulmedio); 
+    color: var(--blanco);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.875rem 1.75rem; 
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 0.875rem;
+    letter-spacing: 0.03125rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.barra-ea-sports .boton-juga-ya:hover {
+    background-color: var(--azulclaro); 
+}
+
+.boca-titulo-contenedor{
+    width: 95%;
+    margin: 0 auto 2.5rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0rem 1rem;    
+}
+
+.boca-texto-principal{
+    color: var(--blanco);
+    font-family:"Oswald",'Oswald', sans-serif;
+    font-size: clamp(3rem, 6vw, 5.5rem); ;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+    margin: 0;
+    height: 8.9375rem;
+    padding: 0;
+    line-height: 8.9375rem;
+}
+
+.boca-estrelllas-grupo{
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-direction: row;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    height: 4rem;
+    margin: 0;
+    padding: 0;
+}
+
+.estrella-svg{
+    width: 3.8125rem;
+    display: block;
+    height: 3.75rem;
+    object-fit: contain;
+    margin: 0 0 0.25rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    padding: 0;
+  
+}
+
+.sitio-footer {
+    width: 100%;
+    background-color: var(--azul);
+    padding: 4rem 5% 2rem 5%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-columnas-zona {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    gap: 2rem;
+}
+
+.footer-columna {
+    display: flex;
+    flex-direction: column;
+    min-width: 11rem;
+}
+
+.footer-columna-titulo {
+    font-family: "Oswald", 'Oswald', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--amarillo); 
+    text-transform: uppercase;
+    margin: 0 0 1.25rem 0;
+    letter-spacing: 0.0313rem;
+}
+
+.footer-columna-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-columna-lista li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-columna-lista li a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.footer-columna-lista li a:hover {
+    color: var(--amarillo);
+}
+
+.link-prensa {
+    border-bottom: 0.0625rem solid var(--amarillo);
+    padding-bottom: 0.25rem;
+    margin-top: 1rem;
+    width: fit-content;
+}
+
+.footer-contacto-zona {
+    width: 100%;
+    border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-contacto-items {
+    display: flex;             
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;           
+    gap: 2rem;                 
+}
+
+.contacto-item {
+    color: var(--blanco);
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;               
+}
+
+.contacto-item svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    color: var(--blanco);
+    opacity: 0.8;
+}
+
+.footer-inferior-bar {
+    width: 100%;
+    display: flex;             
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 0.5rem;
+}
+
+.footer-copyright p {
+    color: var(--blanco);
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    margin: 0;
+    opacity: 0.8;
+}
+
+.footer-marcas-redes {
+    display: flex;             
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+}
+
+.data-factory-zona {
+    display: flex;
+    align-items: center;
+}
+
+.df-texto {
+    color: var(--blanco);
+    font-family: 'Syncopate', 'Orbitron', 'Montserrat', sans-serif;
+    font-weight: 0;
+    font-size: 1rem;
+    letter-spacing: 0.0625rem;
+}
+
+
+.redes-iconos-grupo {
+    display: flex;             
+    flex-direction: row;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.red-enlace {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: transform 0.2s ease;
+}
+
+.red-enlace img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    filter: brightness(0) invert(1); 
+    transition: filter 0.3s ease;
+}
+
+
+.red-enlace:hover img {
+    filter: invert(74%) sepia(61%) saturate(1412%) hue-rotate(346deg) brightness(101%) contrast(97%);
+}
+
+.red-enlace:hover {
+    transform: translateY(-0.125rem);
+}
+
+.footer-contacto-items .contacto-item:hover {
+    color: var(--amarillo);
+}
+
+.footer-contacto-items .contacto-item:hover svg {
+    color: var(--amarillo);
 }
