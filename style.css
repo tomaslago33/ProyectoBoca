@@ -1609,6 +1609,7 @@ animation: latido 1.5s infinite ease-in-out;
     margin: 0px 20px 0px 20px ;
     display: flex;
     text-align: center;
+    align-items: center;
 }
 
 .torneo a{
@@ -1628,7 +1629,7 @@ animation: latido 1.5s infinite ease-in-out;
 }
 
 .torneo-cabecera{
-    width: 150%;
+    width: 120%;
     height: 70px;
     background-color: var(--amarillo);
     margin-top: 50px;
@@ -1638,17 +1639,18 @@ animation: latido 1.5s infinite ease-in-out;
 }
 
 .lpf{
-    padding: 20px 0px 20px 30px;
+    padding: 20px 20px 20px 24px;
 }
 
 .escudo{
-    padding: 20px 30px 20px 0px;
+    padding: 20px 20px 20px 24px;
 }
 
 .torneo-cuerpo{
-    width: 150%;
+    width: 120%;
     height: 250px;
     background-color: var(--amarillo);
+    border-radius: 0px 0px 50px;
 }
 
 .fecha-partido{
@@ -1660,3 +1662,70 @@ animation: latido 1.5s infinite ease-in-out;
     padding: 20px 0px 0px 20px;
 }
 
+.equipos{
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0px 0px 20px;
+}
+
+.rival{
+    display: flex;
+    font-family: "Akzidenz Cnd",arial,sans-serif;
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: #222E4656;
+    gap: 8px;
+}
+
+.boca{
+    display: flex;
+    font-family: "Akzidenz Cnd",arial,sans-serif;
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: var(--azuloscuro);
+    margin-top: 8px ;
+}
+
+.torneo-cabecera2{
+    width: 120%;
+    height: 70px;
+    background-color: var(--azulclaro);
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 0.1px gray;
+}
+
+.torneo-cuerpo2{
+    width: 120%;
+    height: 250px;
+    background-color: var(--azulclaro);
+    border-radius: 0px 0px 50px;
+}
+
+.fecha-partido2{
+    display: flex;
+    font-family:"Akzidenz Cnd",arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: var(--blanco);
+    padding: 20px 0px 0px 20px;
+}
+
+.rival2{
+    display: flex;
+    font-family: "Akzidenz Cnd",arial,sans-serif;
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: #FFFFFF5C;
+    gap: 8px;
+}
+
+.boca2{
+    display: flex;
+    font-family: "Akzidenz Cnd",arial,sans-serif;
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: var(--blanco);
+    margin-top: 8px ;
+}
