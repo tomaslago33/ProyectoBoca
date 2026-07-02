@@ -1672,9 +1672,9 @@ animation: latido 1.5s infinite ease-in-out;
 
 .slider-copas {
     position: relative;
-    width: 100%;
+    width: 97%;
     margin: 0rem auto !important;
-    padding: 1rem 5% !important;
+    padding: 1rem 0rem !important;
     box-sizing: border-box !important;
 }
 
@@ -1788,9 +1788,9 @@ animation: latido 1.5s infinite ease-in-out;
     margin-top: 2rem;
 }
 .barra-ea-sports{
-    width: 95%;
+    width: 97%;
     background-color: var(--amarillo);
-    padding: 0.9375rem 1.125rem;
+    padding: 1.3rem 1.75rem;
     border-radius: 0rem 0rem 0rem 1.25rem;
     display: flex;
     justify-content: space-between;
@@ -1812,7 +1812,7 @@ animation: latido 1.5s infinite ease-in-out;
 .barra-ea-sports .ea-sports-contenido img{
     width: auto;
     display: block;
-    height: 2.0rem;
+    height: 2.8rem;
     object-fit: contain;
 }
 
@@ -1821,11 +1821,11 @@ animation: latido 1.5s infinite ease-in-out;
     color: var(--blanco);
     text-decoration: none;
     text-transform: uppercase;
-    padding: 0.875rem 1.75rem; 
+    padding:1rem 2.2rem; 
     font-weight: bold;
     font-family: Arial, sans-serif;
-    font-size: 0.875rem;
-    letter-spacing: 0.03125rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.05rem;
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -1838,7 +1838,7 @@ animation: latido 1.5s infinite ease-in-out;
 }
 
 .boca-titulo-contenedor{
-    width: 95%;
+    width: 97%;
     margin: 0 auto 2.5rem auto;
     display: flex;
     flex-direction: row;
@@ -1890,21 +1890,22 @@ animation: latido 1.5s infinite ease-in-out;
 .sitio-footer {
     width: 100%;
     background-color: var(--azul);
-    padding: 4rem 5% 2rem 5%;
+    padding: 4rem 0rem 2rem 0rem;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
 }
 
 .footer-columnas-zona {
-    width: 100%;
+    width: 97%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    margin-bottom: 3rem;
     gap: 2rem;
+    padding: 0rem 1rem;
+    margin: 0 auto 3rem auto;
 }
 
 .footer-columna {
@@ -1954,10 +1955,10 @@ animation: latido 1.5s infinite ease-in-out;
 }
 
 .footer-contacto-zona {
-    width: 100%;
-    border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 2.5rem;
-    margin-bottom: 1.5rem;
+    width: 97%;
+    padding:0 1rem 2.5rem 1rem;
+    margin:0 auto 1.5rem auto;
+    box-sizing: border-box;
 }
 
 .footer-contacto-items {
@@ -1986,14 +1987,16 @@ animation: latido 1.5s infinite ease-in-out;
 }
 
 .footer-inferior-bar {
-    width: 100%;
+    width: 97%;
     display: flex;             
     flex-direction: row;
     justify-content: space-between; 
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
-    padding-top: 0.5rem;
+    padding:0.5rem 1rem 0 1rem;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .footer-copyright p {
