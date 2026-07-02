@@ -1545,10 +1545,28 @@ align-items: center;
 }
 
 .tarjeta_sponsors2{
+    position: relative;
     width: 30.2%;
     height: 25rem;
-    border: 1px solid rgba(255,255,255,0.15);
+    border: 1px solid rgb(72, 91, 107);
+}
 
+.tarjeta_sponsors2::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(34, 57, 107, 1) 0%,
+        rgba(34, 57, 107, 0.98) 20%,
+        rgba(34, 57, 107, 0.90) 45%,
+        rgba(34, 57, 107, 0.65) 65%,
+        rgba(34, 57, 107, 0.30) 82%,
+        rgba(34, 57, 107, 0.00) 100%
+    );
+
+    z-index: 1;
 }
 
 
@@ -1561,6 +1579,7 @@ align-items: center;
     flex-direction: column;
     align-items: left;
     text-align: left;
+    z-index: 2;
 
 }
 
@@ -1605,24 +1624,3 @@ align-items: center;
   transition: background 0.2s ease;
 }
 
-.tarjeta_sponsors2::before{
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background:
-        radial-gradient(
-            circle at left center,
-            var(--azulmedio) 0%,
-            var(--azulmedio) 35%,
-            var(--azulmedio) 60%,
-            transparent 100%
-        ),
-
-        linear-gradient(
-            90deg,
-            var(--azuloscuro) 0%,
-            var(--azuloscuro) 45%,
-            var(--azuloscuro) 100%
-        );
-}
