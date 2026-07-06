@@ -1616,7 +1616,6 @@ animation: latido 1.5s infinite ease-in-out;
     font-family: 'Akzidenz Cnd',Arial, sans-serif;
     color: #222222;
     margin: 0px 0px 0px 60px;
-    text-decoration: none;
 }
 
 .copa a{
@@ -1728,3 +1727,5 @@ animation: latido 1.5s infinite ease-in-out;
     color: var(--blanco);
     margin-top: 8px ;
 }
+
+.primer-
