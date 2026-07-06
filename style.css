@@ -1676,7 +1676,7 @@ animation: latido 1.5s infinite ease-in-out;
 }
 
 .torneo-cabecera2{
-    width: 120%;
+    width: 110%;
     height: 70px;
     background-color: var(--azulclaro);
     margin-top: 50px;
@@ -1686,7 +1686,7 @@ animation: latido 1.5s infinite ease-in-out;
 }
 
 .torneo-cuerpo2{
-    width: 120%;
+    width: 110%;
     height: 250px;
     background-color: var(--azulclaro);
     border-radius: 0px 0px 50px;
@@ -1720,6 +1720,6 @@ animation: latido 1.5s infinite ease-in-out;
 }
 
 .torneo{
-    display: inline-flex;
+    display: flex;
     gap: 2.7rem;
 }
