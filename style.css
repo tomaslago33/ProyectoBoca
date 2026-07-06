@@ -1531,12 +1531,14 @@ animation: latido 1.5s infinite ease-in-out;
 }
 
 .seccion-copas {
-    border-top: var(--blanco);
+    border-top:6px solid var(--blanco);
     width: 100%;
     background-color: var(--amarillo);
     padding: 6rem 0rem 1.7rem ;
     position: relative;
     box-sizing: border-box;
+    border-bottom:6px solid var(--blanco);
+
 }
 
 .titulo-copas-principal {
@@ -1769,16 +1771,7 @@ animation: latido 1.5s infinite ease-in-out;
 .slider-copas .flecha-slider:active {
     transform: translateY(-50%) scale(0.9);
 }
-.linea-separadora-blanca {
-    position: absolute; 
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-    height: 6px;
-    width: 100%;
-    background-color: var(--blanco);
-    margin: 0;
-}
+
 
 .barra-ea-boca{
     width: 100%;
@@ -1799,21 +1792,26 @@ animation: latido 1.5s infinite ease-in-out;
     margin-bottom: 3.5rem;
     margin-left: auto;
     margin-right: auto;
+    gap: 10rem;
 }
 
-.boton-ea-sports .ea-sports-contenido{
+.boton-ea-sports .ea-sports-contenido {
     display: flex;
     align-items: center;
     flex-grow: 1;
-    max-width: 100%;
+    flex-shrink: 1;
+    max-width: 0;
     overflow: hidden;
+    
 }
 
-.barra-ea-sports .ea-sports-contenido img{
+.barra-ea-sports .ea-sports-contenido img {
     width: auto;
     display: block;
     height: 2.8rem;
     object-fit: contain;
+    max-width: 100%;
+    object-position: left center;
 }
 
 .barra-ea-sports .boton-juga-ya {
@@ -1831,6 +1829,7 @@ animation: latido 1.5s infinite ease-in-out;
     align-items: center;
     justify-content: center;
     transition: background-color 0.2s ease;
+    white-space: nowrap;
 }
 
 .barra-ea-sports .boton-juga-ya:hover {
