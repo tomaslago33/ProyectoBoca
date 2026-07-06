@@ -55,3 +55,4 @@ function controlarDegradado(swiper) {
         swiper.isBeginning ? "0" : "1"
     );
 }
+

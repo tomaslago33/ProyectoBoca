@@ -1618,7 +1618,7 @@ animation: latido 1.5s infinite ease-in-out;
 }
 
 .torneo-cabecera{
-    width: 110%;
+    width: 130%;
     height: 70px;
     background-color: var(--amarillo);
     margin-top: 50px;
@@ -1636,7 +1636,7 @@ animation: latido 1.5s infinite ease-in-out;
 }
 
 .torneo-cuerpo{
-    width: 110%;
+    width: 130%;
     height: 250px;
     background-color: var(--amarillo);
     border-radius: 0px 0px 50px;
@@ -1676,7 +1676,7 @@ animation: latido 1.5s infinite ease-in-out;
 }
 
 .torneo-cabecera2{
-    width: 110%;
+    width: 130%;
     height: 70px;
     background-color: var(--azulclaro);
     margin-top: 50px;
@@ -1686,7 +1686,7 @@ animation: latido 1.5s infinite ease-in-out;
 }
 
 .torneo-cuerpo2{
-    width: 110%;
+    width: 130%;
     height: 250px;
     background-color: var(--azulclaro);
     border-radius: 0px 0px 50px;
@@ -1721,5 +1721,5 @@ animation: latido 1.5s infinite ease-in-out;
 
 .torneo{
     display: flex;
-    gap: 2.7rem;
+    gap:4.7rem;
 }
