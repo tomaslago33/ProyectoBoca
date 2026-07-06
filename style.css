@@ -1607,18 +1607,9 @@ animation: latido 1.5s infinite ease-in-out;
 .agenda{
     width: 90%;
     margin: 0px 20px 0px 20px ;
-    display: flex;
-    text-align: center;
 }
 
-.torneo a{
-    width: 20%;
-    font-family: 'Akzidenz Cnd',Arial, sans-serif;
-    color: #222222;
-    margin: 0px 0px 0px 60px;
-}
-
-.copa a{
+.links-torneo a{
     width: 20%;
     font-family: 'Akzidenz Cnd',Arial, sans-serif;
     color: #222222;
@@ -1627,7 +1618,7 @@ animation: latido 1.5s infinite ease-in-out;
 }
 
 .torneo-cabecera{
-    width: 120%;
+    width: 110%;
     height: 70px;
     background-color: var(--amarillo);
     margin-top: 50px;
@@ -1645,7 +1636,7 @@ animation: latido 1.5s infinite ease-in-out;
 }
 
 .torneo-cuerpo{
-    width: 120%;
+    width: 110%;
     height: 250px;
     background-color: var(--amarillo);
     border-radius: 0px 0px 50px;
@@ -1728,4 +1719,7 @@ animation: latido 1.5s infinite ease-in-out;
     margin-top: 8px ;
 }
 
-.primer-
+.torneo{
+    display: inline-flex;
+    gap: 2.7rem;
+}
