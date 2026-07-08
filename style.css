@@ -880,30 +880,22 @@ animation: latido 1.5s infinite ease-in-out;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80px; /* Tamaño del icono */
-  pointer-events: none; /* Hace que el mouse "traspase" la imagen para poder dar clic en el video */
-  opacity: 0; /* Oculto por defecto */
-  transition: opacity 0.5s ease; /* Efecto de transición suave */
+  width: 80px; 
+  pointer-events: none; 
+  opacity: 0; 
+  transition: opacity 0.5s ease;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.25, 1, 0.5, 1); 
 }
 
 /* Aparece el icono de play al pasar el mouse */
 .video-imagen-contenedor:hover .icono-play {
   opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .video-imagen-contenedor::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('/iconos-redes/icon-23.svg') no-repeat center / 55px;
-    filter: invert(100%) brightness(150%) !important;
-    opacity: 0;
-    transform: scale(0.8);
-    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
-    z-index: 2;
+   display: none !important;
 }
 
 .video-imagen-contenedor:hover .video-foto-portada {
@@ -912,8 +904,7 @@ animation: latido 1.5s infinite ease-in-out;
 }
 
 .video-imagen-contenedor:hover::after {
-    opacity: 1 !important;        
-    transform: scale(1) !important; 
+    display: none !important;
 }
 
 .pie-video {
