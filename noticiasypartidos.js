@@ -73,27 +73,35 @@ document.addEventListener("DOMContentLoaded", function () {
         spaceBetween: 16,
     });
 
-});
+    // CAMBIO DE TORNEOS
 
-const links = document.querySelectorAll(".links-torneo a");
-const torneos = document.querySelectorAll(".torneo");
+    const links = document.querySelectorAll(".links-torneo a");
+    const torneos = document.querySelectorAll(".torneo");
 
-links.forEach(link => {
-    link.addEventListener("click", function(e){
-        e.preventDefault();
+    links.forEach(link => {
 
-        links.forEach(l => l.classList.remove("activo"));
-        this.classList.add("activo");
+        link.addEventListener("click", function(e){
 
-        torneos.forEach(t => t.classList.remove("activo"));
+            e.preventDefault();
 
-        const torneo = document.getElementById(this.dataset.torneo);
-        torneo.classList.add("activo");
+            const torneoSeleccionado = this.dataset.torneo;
 
-        const swiper = torneo.querySelector(".swiper").swiper;
+            // sacar activo de todos los links
+            links.forEach(l => l.classList.remove("activo"));
 
-        if (swiper) {
-            swiper.update();
-        }
+            // sacar activo de todos los torneos
+            torneos.forEach(t => t.classList.remove("activo"));
+
+            // activar link clickeado
+            this.classList.add("activo");
+
+            // mostrar torneo correspondiente
+            document
+                .getElementById(torneoSeleccionado)
+                .classList.add("activo");
+
+        });
+
     });
+
 });

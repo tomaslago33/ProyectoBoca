@@ -1717,7 +1717,7 @@ animation: latido 1.5s infinite ease-in-out;
     font-weight: 700;
     font-size: 1.7rem;
     color: #FFFFFF5C;
-    gap: 8px;
+    gap: 4px;
 }
 
 .boca2{
@@ -1726,11 +1726,7 @@ animation: latido 1.5s infinite ease-in-out;
     font-weight: 700;
     font-size: 1.7rem;
     color: var(--blanco);
-    margin-top: 8px ;
-}
-
-.torneo{
-    display: flex;
+    
 }
 
 .torneo{
@@ -1738,11 +1734,10 @@ animation: latido 1.5s infinite ease-in-out;
 }
 
 .torneo.activo{
-    display: flex;
+    display: block;
 }
 
 .links-torneo a.activo{
-    color: var(--amarillo);
-    border-bottom: 2px solid var(--amarillo);
+    border-bottom: 4px solid var(--azuloscuro);
+    font-weight: 700;
 }
-
