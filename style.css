@@ -1591,7 +1591,11 @@ animation: latido 1.5s infinite ease-in-out;
 
 .proximopartido{
     background-color: var(--blanco);
-    padding-top: 40px;
+    background-image: url("/home/ramon/Escritorio/Escuela/PracticasProf/proyecto_bocaa/ProyectoBoca/Carrusel_ProximosPartidos_IMG/fondocancha");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size:contain;
+    padding-top: 30px;
 }
 
 .titulo-partido{
@@ -1625,8 +1629,6 @@ animation: latido 1.5s infinite ease-in-out;
     position: relative;
     width: 97%;
 }
-
-
 
 .torneo-cabecera{
     width: 100%;
@@ -1683,7 +1685,6 @@ animation: latido 1.5s infinite ease-in-out;
     font-weight: 700;
     font-size: 1.7rem;
     color: var(--azuloscuro);
-    margin-top: 8px ;
 }
 
 .torneo-cabecera2{
@@ -1742,7 +1743,6 @@ animation: latido 1.5s infinite ease-in-out;
     border-bottom: 4px solid var(--azuloscuro);
     margin-bottom: -4px;
     z-index: 2;
-    background-image: ;
 }
 
 #clausura{
