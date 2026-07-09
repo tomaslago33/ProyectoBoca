@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const swiperShop = new Swiper(".slider-productos2", {
         direction: "horizontal",
-        slidesPerView: 2.5, 
+        slidesPerView: 3.5, 
         slidesPerGroup: 1,
         spaceBetween: 16,
         loop: false,
@@ -56,3 +56,22 @@ function controlarDegradado(swiper) {
     );
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    const swiperShop = new Swiper(".slider-liga", {
+        direction: "horizontal",
+        slidesPerView: 4.5, 
+        slidesPerGroup: 1,
+        spaceBetween: 16,
+        loop: false,
+        centeredSlides: false,
+        mousewheel: {
+            forceToAxis: true
+        },
+        speed: 300,
+        breakpoints: {
+            480: { slidesPerView: 4.5 },
+            768: { slidesPerView: 4.5 },
+            992: { slidesPerView: 4.5 },
+            1300: { slidesPerView: 4.5 }, 
+            1600: { slidesPerView: 4.5 }
+        }})});
