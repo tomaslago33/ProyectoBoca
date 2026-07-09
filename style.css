@@ -1739,5 +1739,16 @@ animation: latido 1.5s infinite ease-in-out;
 
 .links-torneo a.activo{
     border-bottom: 4px solid var(--azuloscuro);
-    font-weight: 700;
+}
+
+#clausura{
+    padding-bottom: 20px;
+}
+
+#sudaca{
+    padding:0px 0px 20px 15px;
+}
+
+#argentina{
+    padding:0px 0px 20px 15px;
 }
