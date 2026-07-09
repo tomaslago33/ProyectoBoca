@@ -1622,6 +1622,7 @@ animation: latido 1.5s infinite ease-in-out;
 
 .links-torneo{
     border-bottom: solid 4px #e5e6e7;
+    position: relative;
     width: 97%;
 }
 
@@ -1739,6 +1740,9 @@ animation: latido 1.5s infinite ease-in-out;
 
 .links-torneo a.activo{
     border-bottom: 4px solid var(--azuloscuro);
+    margin-bottom: -4px;
+    z-index: 2;
+    background-image: ;
 }
 
 #clausura{
