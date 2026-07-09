@@ -56,22 +56,44 @@ function controlarDegradado(swiper) {
     );
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    const swiperShop = new Swiper(".slider-liga", {
-        direction: "horizontal",
-        slidesPerView: 4.5, 
-        slidesPerGroup: 1,
+document.addEventListener("DOMContentLoaded", function () {
+
+    new Swiper(".slider-liga", {
+        slidesPerView: 4.5,
         spaceBetween: 16,
-        loop: false,
-        centeredSlides: false,
-        mousewheel: {
-            forceToAxis: true
-        },
-        speed: 300,
-        breakpoints: {
-            480: { slidesPerView: 4.5 },
-            768: { slidesPerView: 4.5 },
-            992: { slidesPerView: 4.5 },
-            1300: { slidesPerView: 4.5 }, 
-            1600: { slidesPerView: 4.5 }
-        }})});
+    });
+
+    new Swiper(".slider-sudaca", {
+        slidesPerView: 4.5,
+        spaceBetween: 16,
+    });
+
+    new Swiper(".slider-argentina", {
+        slidesPerView: 4.5,
+        spaceBetween: 16,
+    });
+
+});
+
+const links = document.querySelectorAll(".links-torneo a");
+const torneos = document.querySelectorAll(".torneo");
+
+links.forEach(link => {
+    link.addEventListener("click", function(e){
+        e.preventDefault();
+
+        links.forEach(l => l.classList.remove("activo"));
+        this.classList.add("activo");
+
+        torneos.forEach(t => t.classList.remove("activo"));
+
+        const torneo = document.getElementById(this.dataset.torneo);
+        torneo.classList.add("activo");
+
+        const swiper = torneo.querySelector(".swiper").swiper;
+
+        if (swiper) {
+            swiper.update();
+        }
+    });
+});
