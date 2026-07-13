@@ -58,3 +58,67 @@ window.addEventListener('scroll', () => {
     progressBar.style.transform = `scaleX(${progress})`;
 
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const swiperObras = new Swiper(".slider-obras",{
+
+        slidesPerView:1.2,
+        spaceBetween:20,
+        speed:400,
+
+        navigation:{
+            nextEl:".slider-obras .flecha-slider-obras.flecha-der",
+            prevEl:".slider-obras .flecha-slider-obras.flecha-izq"
+        },
+
+        breakpoints:{
+    640: {
+        slidesPerView: 2.2
+    },
+    992: {
+        slidesPerView: 3.2
+    },
+    1200: {
+        slidesPerView: 3.5
+    },
+    1600: {
+        slidesPerView: 5.5
+    }
+        },
+
+        on:{
+            init:function(){
+
+                actualizarEstadoObras(this);
+
+            },
+
+            slideChange:function(){
+
+                actualizarEstadoObras(this);
+
+            }
+
+        }
+
+    });
+
+});
+
+function actualizarEstadoObras(swiper){
+
+    const flechaIzq = document.querySelector(".slider-obras .flecha-izq");
+    const flechaDer = document.querySelector(".slider-obras .flecha-der");
+
+    const degradado = document.querySelector(".slider-degradado-obras");
+
+    flechaIzq.style.display = swiper.isBeginning ? "none" : "block";
+
+    flechaDer.style.display = swiper.isEnd ? "none" : "block";
+
+    degradado.classList.toggle("inicio", swiper.isBeginning);
+
+    degradado.classList.toggle("fin", swiper.isEnd);
+
+}
