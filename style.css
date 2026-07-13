@@ -1234,6 +1234,7 @@ animation: latido 1.5s infinite ease-in-out;
     opacity: 0; 
     transition: opacity 0.3s ease;
 }
+
 .slider-degradado::before {
     content: "";
     position: absolute;
@@ -1632,45 +1633,36 @@ align-items: center;
   transition: background 0.2s ease;
 }
 
-.obrastarjeta{
-    width: 900rem;
-    height: 900rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--azulmedio);
+.seccion-obras{
+    background:#fff;
+    padding:4rem 0;
 }
 
-.obrastarjeta img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.contenedor-obras{
+    width:100%;
 }
 
-.box-obra-tarjeta{
-    width: 100%;
-    height: 30%;
-    display: flex;
-    justify-content: left;
-    align-items: left;
+.encabezado-obras{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:2rem;
 }
 
-.box-obra-tarjeta span{
-    color: var(--azulclaro);
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.5rem;
-    font-style: bold;
-    font-weight: 700;
+.encabezado-obras h2{
+    color:var(--azulclaro);
+    font-family:Oswald;
+    font-size:3rem;
+    margin:0;
 }
 
-.box-obra-tarjeta h1{
-    color: var(--amarillo);
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.8rem;
-    font-style: bold;
+.encabezado-obras a{
+    color:var(--azulclaro);
+    font-weight:bold;
+    text-decoration:underline;
 }
 
-.slider-productos-obras {
+.slider-obras{
     position: relative; 
     padding: 3rem 0 1.5rem 0;
     width: 100%;
@@ -1680,4 +1672,221 @@ align-items: center;
     padding-left: 2.5% !important;
     box-sizing: border-box !important;
     overflow: hidden !important;
+
+}
+
+.obra-card{
+    display:block;
+    text-decoration:none;
+}
+
+.obra-imagen{
+    width:100%;
+    aspect-ratio: 4 / 3;
+}
+
+.obra-imagen img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.obra-info{
+    background-color: var(--azulclaro);
+    color:white;
+    height: 7.6rem;
+}
+
+
+.obra-info h3{
+    margin:0;
+    padding:1rem 1rem .5rem;
+    font-size:1.4rem;
+    font-family:monospace;
+    line-height:1.05;
+    word-spacing: -7px;
+}
+
+
+.obra-categoria{
+    display:block;
+    padding:1.1rem;
+    font-size:1rem;
+    font-family:Arial;
+    height: 10px;
+}
+
+.obra-separador{
+    width:100%;
+    height:1px;
+    background:rgba(255,255,255,.2);
+}
+
+.obra-titulo{
+
+    margin:0;
+
+    padding:1.3rem 1rem;
+
+    font-family:Oswald;
+
+    font-size:2rem;
+
+    line-height:1.05;
+
+    text-transform:uppercase;
+
+    color:white;
+
+}
+
+
+
+.slider-obras {
+    position: relative; 
+    padding: 0px 0 0px 0;
+    width: 100%;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding-right: 5% !important;
+    padding-left: 2.5% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+}
+
+.slider-obras .flecha-slider-obras {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4rem;
+    height: 80%;
+    z-index: 10;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0; 
+    pointer-events: auto;
+    transition: opacity 0.3s ease,  transform 0.2s ease;
+}
+
+.slider-obras:hover .flecha-slider-obras,
+.slider-obras:hover .slider-degradado-obras {
+    opacity: 1; 
+}
+
+.flecha-slider-obras:active {
+    transform: translateY(-50%) scale(0.9);
+}
+
+.slider-obras .flecha-izq {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0; 
+    right: auto !important;
+    width: 5rem;
+    height: 100%;
+    z-index: 10;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2322396B'%3E%3Cpath d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 60%;
+}
+.slider-obras .flecha-der {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    left: auto !important; 
+    width: 5rem;
+    height: 100%;
+    z-index: 10;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2322396B'%3E%3Cpath d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 60%;
+}
+
+.slider-degradado-obras {
+  position: absolute;
+    top: 0px; 
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 8; 
+    pointer-events: none; 
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+.slider-degradado-obras::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 5%; 
+    height: 120%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* 2. EL DEGRADADO DE LA DERECHA */
+.slider-degradado-obras::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 8%; 
+    height: 120%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    z-index: 8;
+    pointer-events: none;
+}
+
+
+.titulo-obras{
+    font-family: monospace ;
+    font-size: 2.5rem; 
+    color: var(--azuloscuro);
+    margin: 0;
+}
+
+.encabezado-obras{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: left;
+    width: 100%;
+    max-width: 100% !important;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 2.5%;
+    box-sizing: border-box;
+}
+
+.encabezado-obras a{
+    text-decoration: none;
+    color: var(--azuloscuro);
+}
+
+.slider-degradado-obras.inicio::before{
+
+    opacity:0;
+
+}
+
+.slider-degradado-obras.fin::after{
+
+    opacity:0;
+
+}
+
+.slider-degradado-obras::before,
+.slider-degradado-obras::after{
+
+    transition:.3s;
+
 }
