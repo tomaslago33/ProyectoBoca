@@ -99,6 +99,9 @@
     color: white;
 }
 
+body::-webkit-scrollbar {
+  display: none; 
+}
 
 html, body {
     margin:0;
@@ -275,6 +278,13 @@ html, body {
     margin: 0;
 }
 
+.linea-separadora-amarilla2 {
+    height: 6px;
+    width: 100%;
+    background-color: var(--amarillo);
+    margin: 0;
+}
+
 body{
     background-color: var(--azulclaro);
     font-family: Arial, sans-serif;
@@ -321,11 +331,11 @@ body{
 }
 
 .sponsors img.logo-betson{
-  height: 40px;
+  height: 18px;
 }
 
 .sponsors img.logo-directv{
-  height: 25px;
+  height: 18px;
 }
 
 .sponsors img.logo-centrohogar{
@@ -411,7 +421,7 @@ body{
   right: 35px;
   bottom: 45px;
   background: var(--amarillo);
-  color: #111;
+  color: var(--azulmedio);
   text-decoration: none;
   padding: 18px 30px;
   font-weight: bold;
@@ -459,7 +469,7 @@ body{
 }
 
 .noticias-tarjetas a {
-  border: 1px solid gray;
+  border: 1px solid rgba(255,255,255,0.15);
   width: 48%;
 }
 
@@ -1224,6 +1234,7 @@ animation: latido 1.5s infinite ease-in-out;
     opacity: 0; 
     transition: opacity 0.3s ease;
 }
+
 .slider-degradado::before {
     content: "";
     position: absolute;
@@ -1483,6 +1494,318 @@ animation: latido 1.5s infinite ease-in-out;
 .slider-productos2 {
     position: relative; 
     padding: 1rem 0 1.5rem 0;
+}
+
+.cabj_box{
+justify-content: space-between;
+display: flex;
+padding: 0 3.2rem 0 3.2rem;
+align-items: center;
+}
+
+.cabj_box{
+    background-color: var(--azulclaro);
+}
+
+.cabj_box h1{
+    color : var(--amarillo);
+    font-family: monospace ;
+    font-size: 7rem;
+    padding-right: 1.5rem;
+
+}
+
+.barraamarilla{
+    background-color: var(--amarillo);
+    width: 75%;
+    height: 7rem;
+}
+
+.subsponsor2{
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 2rem;
+    gap: 2rem;
+}
+
+.carrusel_sponsors2 {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carrusel_sponsors2_track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: scroll 38s linear infinite;
+}
+
+.slide {
+    flex-shrink: 0;
+    margin-right: 10rem;
+    display: flex;
+    align-items: center;
+}
+
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.carrusel_sponsors2 {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.carrusel_sponsors2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+
+    background: linear-gradient(
+        to right,
+        var(--azulclaro) 0%,
+        var(--azulclaro) 20%,
+        rgba(255,255,255,0) 100%
+    );
+}
+
+.carrusel_sponsors2::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+
+    background: linear-gradient(
+        to left,
+        var(--azulclaro) 0%,
+        var(--azulclaro) 20%,
+        rgba(255,255,255,0) 100%
+    );
+}
+
+.sponsors2_tarjetas{
+    display: flex;
+    justify-content: space-between 0;
+    gap: 25px;
+    align-items: center;
+    width: 100%;
+    padding: 0 2rem 0 2rem;
+    margin-bottom: 40px;
+
+}
+
+.tarjeta_sponsors2{
+    position: relative;
+    width: 30.2%;
+    height: 25rem;
+    border: 1px solid rgb(72, 91, 107);
+}
+
+.tarjeta_sponsors2::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(34, 57, 107, 1) 0%,
+        rgba(34, 57, 107, 0.98) 20%,
+        rgba(34, 57, 107, 0.90) 45%,
+        rgba(34, 57, 107, 0.65) 65%,
+        rgba(34, 57, 107, 0.30) 82%,
+        rgba(34, 57, 107, 0.00) 100%
+    );
+
+    z-index: 1;
+}
+
+
+.box_tarjeta{
+    position: relative;
+    height: 85%;
+    width: 85%;
+    margin: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    z-index: 2;
+
+}
+
+.box_tarjeta h2{
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    font-style: bold;
+    font-weight: 700;
+    margin: 5px;
+
+}
+
+.box_tarjeta h1{
+    color: var(--amarillo);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    font-style: bold;
+    margin: 5px;
+}
+
+.box_tarjeta span{
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 5px;
+}
+
+.box_tarjeta img{
+    display: flex;
+}
+
+.promo-btn2 {
+  position: absolute;
+  bottom: 1px;
+  background: var(--amarillo);
+  color: var(--azulmedio);
+  text-decoration: none;
+  padding: 18px 30px;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.seccion-obras{
+    background:#fff;
+    padding:4rem 0;
+}
+
+.contenedor-obras{
+    width:100%;
+}
+
+.encabezado-obras{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:2rem;
+}
+
+.encabezado-obras h2{
+    color:var(--azulclaro);
+    font-family:Oswald;
+    font-size:3rem;
+    margin:0;
+}
+
+.encabezado-obras a{
+    color:var(--azulclaro);
+    font-weight:bold;
+    text-decoration:underline;
+}
+
+.slider-obras{
+    position: relative; 
+    padding: 3rem 0 1.5rem 0;
+    width: 100%;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding-right: 5% !important;
+    padding-left: 2.5% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+
+}
+
+.obra-card{
+    display:block;
+    text-decoration:none;
+}
+
+.obra-imagen{
+    width:100%;
+    aspect-ratio: 4 / 3;
+}
+
+.obra-imagen img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.obra-info{
+    background-color: var(--azulclaro);
+    color:white;
+    height: 7.6rem;
+}
+
+
+.obra-info h3{
+    margin:0;
+    padding:1rem 1rem .5rem;
+    font-size:1.4rem;
+    font-family:monospace;
+    line-height:1.05;
+    word-spacing: -7px;
+}
+
+
+.obra-categoria{
+    display:block;
+    padding:1.1rem;
+    font-size:1rem;
+    font-family:Arial;
+    height: 10px;
+}
+
+.obra-separador{
+    width:100%;
+    height:1px;
+    background:rgba(255,255,255,.2);
+}
+
+.obra-titulo{
+
+    margin:0;
+
+    padding:1.3rem 1rem;
+
+    font-family:Oswald;
+
+    font-size:2rem;
+
+    line-height:1.05;
+
+    text-transform:uppercase;
+
+    color:white;
+
+}
+
+
+
+.slider-obras {
+    position: relative; 
+    padding: 0px 0 0px 0;
     width: 100%;
     max-width: 100% !important;
     margin: 0 auto !important;
@@ -1492,7 +1815,7 @@ animation: latido 1.5s infinite ease-in-out;
     overflow: hidden !important;
 }
 
-.slider-productos2 .flecha-slider {
+.slider-productos2 .flecha-slider .slider-obras .flecha-slider-obras {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -1514,6 +1837,16 @@ animation: latido 1.5s infinite ease-in-out;
 }
 
 
+.slider-productos2 .flecha-izq,
+.slider-obras:hover .flecha-slider-obras,
+.slider-obras:hover .slider-degradado-obras {
+    opacity: 1; 
+}
+
+.flecha-slider-obras:active {
+    transform: translateY(-50%) scale(0.9);
+}
+
 .slider-productos2 .flecha-izq {
     position: absolute;
     top: 50%;
@@ -1524,6 +1857,21 @@ animation: latido 1.5s infinite ease-in-out;
     height: 10%;
     z-index: 10;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23C0C0C0'%3E%3Cpath d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 60%;
+}
+
+.slider-obras .flecha-izq {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0; 
+    right: auto !important;
+    width: 5rem;
+    height: 100%;
+    z-index: 10;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2322396B'%3E%3Cpath d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'/%3E%3C/svg%3E") !important;
     background-repeat: no-repeat;
     background-position: center left;
     background-size: 60%;
@@ -1543,6 +1891,22 @@ animation: latido 1.5s infinite ease-in-out;
     background-size: 60%;
 }
 
+
+.slider-obras .flecha-der {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    left: auto !important; 
+    width: 5rem;
+    height: 100%;
+    z-index: 10;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2322396B'%3E%3Cpath d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 60%;
+}
+
 .sliderdegradado2 {
     position: absolute;
     top: 0px; 
@@ -1550,6 +1914,18 @@ animation: latido 1.5s infinite ease-in-out;
     right: 0;
     bottom: 20px;
     z-index: 1000; 
+    pointer-events: none; 
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+.slider-degradado-obras {
+  position: absolute;
+    top: 0px; 
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 8; 
     pointer-events: none; 
     opacity: 0; 
     transition: opacity 0.3s ease;
@@ -1571,6 +1947,17 @@ animation: latido 1.5s infinite ease-in-out;
     );
 }
 
+.slider-degradado-obras::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 5%; 
+    height: 120%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
 /* 2. EL DEGRADADO DE LA DERECHA */
 .sliderdegradado2::after {
     content: "";
@@ -1580,6 +1967,31 @@ animation: latido 1.5s infinite ease-in-out;
     bottom: 0;
     width: 8%; 
     background: linear-gradient(268deg, rgba(34, 57, 107, 0.98), rgba(34, 57, 107, 0) 99%);
+    pointer-events: none;
+}
+
+.slider-degradado-obras::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 5%; 
+    height: 120%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* 2. EL DEGRADADO DE LA DERECHA */
+.slider-degradado-obras::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 8%; 
+    height: 120%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    z-index: 8;
     pointer-events: none;
 }
 
@@ -1755,4 +2167,46 @@ animation: latido 1.5s infinite ease-in-out;
 
 #argentina{
     padding:0px 0px 20px 15px;
+}
+
+.titulo-obras{
+    font-family: monospace ;
+    font-size: 2.5rem; 
+    color: var(--azuloscuro);
+    margin: 0;
+}
+
+.encabezado-obras{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: left;
+    width: 100%;
+    max-width: 100% !important;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 2.5%;
+    box-sizing: border-box;
+}
+
+.encabezado-obras a{
+    text-decoration: none;
+    color: var(--azuloscuro);
+}
+
+.slider-degradado-obras.inicio::before{
+
+    opacity:0;
+
+}
+
+.slider-degradado-obras.fin::after{
+
+    opacity:0;
+
+}
+
+.slider-degradado-obras::before,
+.slider-degradado-obras::after{
+transition:.3s;
 }
