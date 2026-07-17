@@ -746,7 +746,7 @@ animation: latido 1.5s infinite ease-in-out;
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1); /* La imagen crece un 10% */
+    transform: scale(1.1); 
   }
   100% {
     transform: scale(1);
