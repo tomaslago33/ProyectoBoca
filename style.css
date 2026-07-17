@@ -1994,7 +1994,7 @@ align-items: center;
 
 .proximopartido{
     background-color: var(--blanco);
-    background-image: url("/home/ramon/Escritorio/Escuela/PracticasProf/proyecto_bocaa/ProyectoBoca/Carrusel_ProximosPartidos_IMG/fondocancha");
+    background-image: url("Carrusel_ProximosPartidos_IMG/fondocancha");
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size:contain;
