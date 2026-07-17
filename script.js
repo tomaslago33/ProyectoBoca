@@ -118,3 +118,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+const swiperCopas = new Swiper('.slider-copas', {
+    slidesPerView: 'auto', 
+    spaceBetween: 16,      
+    loop: false, 
+    grabCursor: true,
+    navigation: {
+        nextEl: '.slider-copas .flecha-der',
+        prevEl: '.slider-copas .flecha-izq',
+    }
+});
