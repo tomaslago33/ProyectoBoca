@@ -1610,7 +1610,8 @@ animation: latido 1.5s infinite ease-in-out;
 
 .agenda{
     width: 100%;
-    margin: 0px 20px 0px 20px ;
+    margin: 0px 20px -100px 20px ;
+    z-index: 10;
 }
 
 .links-torneo a{
@@ -1694,14 +1695,15 @@ animation: latido 1.5s infinite ease-in-out;
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
-    border-bottom: solid 0.1px gray;
+    border-bottom: solid 0.1px rgb(153, 153, 153);
 }
 
 .torneo-cuerpo2{
     width: 100%;
     height: 250px;
     background-color: var(--azulclaro);
-    border-radius: 0px 0px 50px;
+    border-radius: 0px 0px 50px ;
+    border-bottom: solid 1px gray;
 }
 
 .fecha-partido2{
@@ -1755,4 +1757,30 @@ animation: latido 1.5s infinite ease-in-out;
 
 #argentina{
     padding:0px 0px 20px 15px;
+}
+
+.cabj_box{
+justify-content: space-between;
+display: flex;
+padding: 0 3.2rem 0 3.2rem;
+align-items: center;
+}
+
+.cabj_box h1{
+    color : var(--amarillo);
+    font-family: monospace ;
+    font-size: 7rem;
+    padding-right: 1.5rem;
+
+}
+
+.barraamarilla{
+    background-color: var(--amarillo);
+    width: 75%;
+    height: 7rem;
+}
+
+.barra-azul{
+    background-color:var(--azulclaro);
+    height: 20vh;
 }
